@@ -1,0 +1,35 @@
+﻿<Application x:Class="MosaicFunds.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MosaicFunds"
+             
+             xmlns:viewModel="clr-namespace:MosaicFunds.MVVM.ViewModel"
+             xmlns:view="clr-namespace:MosaicFunds.MVVM.View"
+             
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/SideMenuButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/SearchBoxTheme.xaml"/>
+                <ResourceDictionary Source="Theme/TickerButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/DateIntervalButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/ScrollViewerTheme.xaml"/>
+                <ResourceDictionary Source="Theme/DiscoverButtonTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModel:DashboardViewModel}">
+                <view:DashboardView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:DiscoverViewModel}">
+                <view:DiscoverView/>
+            </DataTemplate>
+            
+        </ResourceDictionary>
+        
+        
+        
+    </Application.Resources>
+</Application>
