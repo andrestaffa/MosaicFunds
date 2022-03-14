@@ -5,19 +5,20 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MosaicFunds.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="645" d:DesignWidth="1080">
+             d:DesignHeight="720" d:DesignWidth="1080">
 
     <StackPanel Orientation="Vertical">
-        <TextBox
+        <ScrollViewer Height="709" VerticalScrollBarVisibility="Visible" Margin="0,10,10,0">
+            <StackPanel Orientation="Vertical">
+
+                <TextBox
                 Width="250"
                 Height="40"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
-                Margin="0, 20, 0, 10"
+                Margin="0, 50, 0, 10"
                 Grid.Column="1"
                 Style="{StaticResource SearchBoxTheme}"/>
-        <ScrollViewer Height="565" VerticalScrollBarVisibility="Visible">
-            <StackPanel Orientation="Vertical">
 
                 <TextBlock Margin="100, 20, 0, 0" 
                            VerticalAlignment="Center" 
@@ -27,10 +28,10 @@
                            FontFamily="/Fonts/#Poppins" 
                            FontWeight="Bold" 
                            FontSize="25"/>
-                
+
                 <StackPanel Orientation="Horizontal">
 
-                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
@@ -110,10 +111,10 @@
                                 </StackPanel>
                             </StackPanel>
                         </Button>
-                        
+
                     </Border>
 
-                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
@@ -193,14 +194,14 @@
                                 </StackPanel>
                             </StackPanel>
                         </Button>
-                        
+
                     </Border>
-                    
+
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
 
-                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
@@ -283,7 +284,7 @@
 
                     </Border>
 
-                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
@@ -379,7 +380,7 @@
 
                 <StackPanel Orientation="Horizontal">
 
-                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
@@ -462,7 +463,7 @@
 
                     </Border>
 
-                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
@@ -549,7 +550,7 @@
 
                 <StackPanel Orientation="Horizontal">
 
-                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
@@ -632,7 +633,7 @@
 
                     </Border>
 
-                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
@@ -728,7 +729,7 @@
 
                 <StackPanel Orientation="Horizontal">
 
-                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
@@ -811,7 +812,7 @@
 
                     </Border>
 
-                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
@@ -898,7 +899,7 @@
 
                 <StackPanel Orientation="Horizontal">
 
-                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
@@ -981,7 +982,7 @@
 
                     </Border>
 
-                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
@@ -1077,7 +1078,7 @@
 
                 <StackPanel Orientation="Horizontal">
 
-                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
@@ -1160,7 +1161,7 @@
 
                     </Border>
 
-                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
@@ -1247,7 +1248,7 @@
 
                 <StackPanel Orientation="Horizontal">
 
-                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
@@ -1330,7 +1331,7 @@
 
                     </Border>
 
-                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
