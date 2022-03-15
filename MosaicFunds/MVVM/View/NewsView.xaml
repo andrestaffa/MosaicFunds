@@ -1,0 +1,809 @@
+﻿<UserControl x:Class="MosaicFunds.MVVM.View.NewsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MosaicFunds.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="1080">
+
+
+
+    <StackPanel Orientation="Vertical">
+        <ScrollViewer Height="692" VerticalScrollBarVisibility="Visible" Margin="0,10,10,0">
+
+            <StackPanel Orientation="Vertical">
+
+                <TextBox
+                Width="250"
+                Height="40"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Margin="0, 50, 0, 10"
+                Grid.Column="1"
+                Style="{StaticResource SearchBoxTheme}"/>
+
+                <TextBlock Margin="100, 20, 0, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" 
+                           Text="Trending" 
+                           Foreground="White" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="25"/>
+
+                <StackPanel Orientation="Horizontal">
+
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+                        <Border.Effect>
+                            <DropShadowEffect Direction="275" BlurRadius="20"/>
+                        </Border.Effect>
+
+                        <Button Height="250" Style="{StaticResource NewsButtonTheme}">
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="APPL" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="+1.54%" 
+                                       Foreground="#00ff00" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="GOOGL" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="+1.22%" 
+                                       Foreground="#00ff00" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="FB" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="-3.46%" 
+                                       Foreground="Red" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                </StackPanel>
+
+                                <TextBlock Margin="10, 30, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Markets Grow" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="20"/>
+
+                                <TextBlock Margin="10, 10, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Markets are overall green today due to &#10;growth expenditors in the EV sector &#10;and reduced interset rates." 
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+
+                                <TextBlock Margin="0, 30, 20, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Right" 
+                                   Text="March 14, 2022" 
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="18"/>
+
+                            </StackPanel>
+                        </Button>
+
+                    </Border>
+
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+                        <Border.Effect>
+                            <DropShadowEffect Direction="275" BlurRadius="20"/>
+                        </Border.Effect>
+
+                        <Button Height="250" Style="{StaticResource NewsButtonTheme}">
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="WTI" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="+10.85%" 
+                                       Foreground="#00ff00" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="BRENT" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="+11.42%" 
+                                       Foreground="#00ff00" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="GAS" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="+4.76%" 
+                                       Foreground="#00ff00" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                </StackPanel>
+
+                                <TextBlock Margin="10, 30, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Oil Surges" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="20"/>
+
+                                <TextBlock Margin="10, 10, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="The Ongoing crisis in Ukraine has let&#10;to a spike in commodities over the last&#10;especially in the engery sector."
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+
+                                <TextBlock Margin="0, 30, 20, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Right" 
+                                   Text="March 13, 2022" 
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="18"/>
+
+                            </StackPanel>
+                        </Button>
+
+                    </Border>
+
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+                        <Border.Effect>
+                            <DropShadowEffect Direction="275" BlurRadius="20"/>
+                        </Border.Effect>
+
+                        <!--https://www.investing.com/news/stock-market-news/berkshire-hathaway-stock-price-reaches-500000-2784422-->
+                        <Button Height="250" Style="{StaticResource NewsButtonTheme}">
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="BRKa" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="+1.04%" 
+                                       Foreground="#00ff00" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="SPY" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="-0.04%" 
+                                       Foreground="Red" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="DJI" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="-0.11%" 
+                                       Foreground="Red" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                </StackPanel>
+
+                                <TextBlock Margin="10, 15, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Berkshire Hathaway&#10;reaches $500,000" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="20"/>
+
+                                <TextBlock Margin="10, 10, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="The share price of Warren Buffett's&#10;Berkshire Hathaway (NYSE:BRKa) Inc&#10;reached $500,000 for the first time&#10;on Monday."
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+
+                                <TextBlock Margin="0, -5, 20, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Right" 
+                                   Text="March 12, 2022" 
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="18"/>
+
+                            </StackPanel>
+                        </Button>
+
+                    </Border>
+
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+                        <Border.Effect>
+                            <DropShadowEffect Direction="275" BlurRadius="20"/>
+                        </Border.Effect>
+
+                        <!--https://www.investing.com/news/forex-news/us-options-remain-toward-russia-including-full-trade-embargo-cnbc-2784270-->
+                        <Button Height="250" Style="{StaticResource NewsButtonTheme}">
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="MOEX" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="-17.64%" 
+                                       Foreground="Red" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="SPY" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="-2.63%" 
+                                       Foreground="Red" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="TSX" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="-0.58%" 
+                                       Foreground="Red" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                </StackPanel>
+
+                                <TextBlock Margin="10, 15, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="U.S. to keep up economic&#10;pressure on Russia" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="20"/>
+
+                                <TextBlock Margin="10, 10, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="The United States will continue&#10;take actions to put pressure on&#10;Russia's economy."
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+
+                                <TextBlock Margin="0, 15, 20, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Right" 
+                                   Text="March 11, 2022" 
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="18"/>
+
+                            </StackPanel>
+                        </Button>
+
+                    </Border>
+
+                </StackPanel>
+
+                <TextBlock Margin="100, 75, 0, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" 
+                           Text="Technology" 
+                           Foreground="White" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="25"/>
+
+                <StackPanel Orientation="Horizontal">
+
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+                        <Border.Effect>
+                            <DropShadowEffect Direction="275" BlurRadius="20"/>
+                        </Border.Effect>
+
+                        <!--https://www.marketwatch.com/story/apple-can-withstand-production-disruptions-in-china-analysts-say-11647289600?mod=technology-->
+                        <Button Height="250" Style="{StaticResource NewsButtonTheme}">
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="APPL" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="-6.74%" 
+                                       Foreground="Red" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="SSE" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="-3.14%" 
+                                       Foreground="Red" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="DJI" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="+0.65%" 
+                                       Foreground="#00ff00" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                </StackPanel>
+
+                                <TextBlock Margin="10, 15, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Apple can withstand &#10;production in China" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="20"/>
+
+                                <TextBlock Margin="10, 10, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Apple Inc. manufacturer Foxconn&#10;Technology Group is pausing&#10;its Shenzhen, China, operations&#10;amid COVID-19 protocols in the city."
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+
+                                <TextBlock Margin="0, 5, 20, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Right" 
+                                   Text="March 14, 2022" 
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="18"/>
+
+                            </StackPanel>
+                        </Button>
+
+                    </Border>
+
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+                        <Border.Effect>
+                            <DropShadowEffect Direction="275" BlurRadius="20"/>
+                        </Border.Effect>
+
+                        <!--https://www.fool.com/investing/2022/03/14/why-nvidia-stock-dropped-again-today/-->
+                        <Button Height="250" Style="{StaticResource NewsButtonTheme}">
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="NVDA" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="-3.48%" 
+                                       Foreground="Red" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="AMD" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="-1.96%" 
+                                       Foreground="Red" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="INTC" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="-3.12%" 
+                                       Foreground="Red" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                </StackPanel>
+
+                                <TextBlock Margin="10, 15, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Why Nvidia Stock&#10;Dropped Again Today?" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="20"/>
+
+                                <TextBlock Margin="10, 10, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Over the weekend that the ongoing conflict in Ukraine&#10;will almost certainly disrupt supplies&#10;of neon gas, which is vital for the&#10;manufacture of semiconductor chips."
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+
+                                <TextBlock Margin="0, 5, 20, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Right" 
+                                   Text="March 14, 2022" 
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="18"/>
+
+                            </StackPanel>
+                        </Button>
+
+                    </Border>
+
+                </StackPanel>
+
+                <TextBlock Margin="100, 75, 0, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" 
+                           Text="Energy" 
+                           Foreground="White" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="25"/>
+
+                <StackPanel Orientation="Horizontal">
+
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+                        <Border.Effect>
+                            <DropShadowEffect Direction="275" BlurRadius="20"/>
+                        </Border.Effect>
+
+                        <!--https://finance.yahoo.com/news/12-oil-stocks-goldman-sachs-thinks-has-big-upside-potential-165838737.html-->
+                        <Button Height="250" Style="{StaticResource NewsButtonTheme}">
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="HES" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="-0.42%" 
+                                       Foreground="Red" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="OVV" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="+4.13%" 
+                                       Foreground="#00ff00" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="FANG" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="+2.68%" 
+                                       Foreground="#00ff00" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                </StackPanel>
+
+                                <TextBlock Margin="10, 15, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="12 oil stocks Goldman Sachs&#10;thinks has big upside potential" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="20"/>
+
+                                <TextBlock Margin="10, 10, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Some of the most well-known oil&#10;stocks have further room to run amid&#10;elevated oil and gas prices,&#10;says strategists at Goldman Sachs."
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+
+                                <TextBlock Margin="0, 5, 20, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Right" 
+                                   Text="March 14, 2022" 
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="18"/>
+
+                            </StackPanel>
+                        </Button>
+
+                    </Border>
+
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+                        <Border.Effect>
+                            <DropShadowEffect Direction="275" BlurRadius="20"/>
+                        </Border.Effect>
+
+                        <!--https://www.cnbc.com/2022/03/14/ford-says-it-will-ramp-up-ev-offering-in-europe.html-->
+                        <Button Height="250" Style="{StaticResource NewsButtonTheme}">
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="F" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="+0.25%" 
+                                       Foreground="#00ff00" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="TSLA" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="+1.71%" 
+                                       Foreground="#00ff00" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="BMW-DE" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                    <TextBlock Margin="10, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="2.78%" 
+                                       Foreground="#00ff00" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="15"/>
+                                </StackPanel>
+
+                                <TextBlock Margin="10, 15, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Ford EV offering in Europe,&#10;plans major battery facility" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="20"/>
+
+                                <TextBlock Margin="10, 10, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Ford says EV production planned&#10;for Cologne now slated to hit 1.2 million&#10;vehicles across a period of six years. "
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+
+                                <TextBlock Margin="0, 25, 20, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Right" 
+                                   Text="March 11, 2022" 
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="18"/>
+
+                            </StackPanel>
+                        </Button>
+
+                    </Border>
+
+                </StackPanel>
+
+                <TextBlock Margin="100, 0, 0, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" 
+                           Text="" 
+                           Foreground="White" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="25"/>
+
+
+            </StackPanel>
+        </ScrollViewer>
+    </StackPanel>
+
+</UserControl>

@@ -58,6 +58,7 @@
                     Margin="10, 10, 0, 0"
                     Foreground="White"
                     FontSize="14"
+                    FontFamily="/Fonts/#Poppins"
                     IsChecked="True"
                     Style="{StaticResource SideMenuButtonTheme}"
                     Command="{Binding DashboardCommand}"/>
@@ -68,6 +69,7 @@
                     Margin="10, 10, 0, 0"
                     Foreground="White"
                     FontSize="14"
+                    FontFamily="/Fonts/#Poppins"
                     Style="{StaticResource SideMenuButtonTheme}"
                     Command="{Binding DiscoverCommand}"/>
 
@@ -77,7 +79,9 @@
                     Margin="10, 10, 0, 0"
                     Foreground="White"
                     FontSize="14"
-                    Style="{StaticResource SideMenuButtonTheme}"/>
+                    FontFamily="/Fonts/#Poppins"
+                    Style="{StaticResource SideMenuButtonTheme}"
+                    Command="{Binding NewsCommand}"/>
 
                     <RadioButton
                     Content="Transactions"
@@ -85,6 +89,7 @@
                     Margin="10, 10, 0, 0"
                     Foreground="White"
                     FontSize="14"
+                    FontFamily="/Fonts/#Poppins"
                     Style="{StaticResource SideMenuButtonTheme}"/>
 
                     <RadioButton
@@ -93,6 +98,7 @@
                     Margin="10, 10, 0, 0"    
                     Foreground="White"
                     FontSize="14"
+                    FontFamily="/Fonts/#Poppins"
                     Style="{StaticResource SideMenuButtonTheme}"/>
 
                 </StackPanel>

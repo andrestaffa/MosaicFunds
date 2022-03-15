@@ -22,7 +22,7 @@
                         <TextBlock Margin="20, 0, 0, 0" 
                                VerticalAlignment="Center" 
                                HorizontalAlignment="Left" 
-                               Text="$517,436" Foreground="White" 
+                               Text="$517,436.43" Foreground="White" 
                                FontFamily="/Fonts/#Poppins"
                                FontWeight="Bold" FontSize="25"/>
                         <TextBlock Margin="10, 0, 0, 0" 
