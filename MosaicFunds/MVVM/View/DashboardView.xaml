@@ -84,7 +84,7 @@
 
                                     <!--ADD TICKERS HERE-->
 
-                                    <Button Style="{StaticResource TickerButtonTheme}">
+                                    <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
                                         <StackPanel Orientation="Horizontal" Margin="10">
                                             <StackPanel>
                                                 <TextBlock Text="AMC" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
@@ -101,7 +101,7 @@
                                             </StackPanel>
                                         </StackPanel>
                                     </Button>
-                                    <Button Style="{StaticResource TickerButtonTheme}">
+                                    <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
                                         <StackPanel Orientation="Horizontal" Margin="10">
                                             <StackPanel>
                                                 <TextBlock Text="AAPL" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
@@ -118,7 +118,7 @@
                                             </StackPanel>
                                         </StackPanel>
                                     </Button>
-                                    <Button Style="{StaticResource TickerButtonTheme}">
+                                    <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
                                         <StackPanel Orientation="Horizontal" Margin="10">
                                             <StackPanel>
                                                 <TextBlock Text="BTE.TO" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
@@ -135,7 +135,7 @@
                                             </StackPanel>
                                         </StackPanel>
                                     </Button>
-                                    <Button Style="{StaticResource TickerButtonTheme}">
+                                    <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
                                         <StackPanel Orientation="Horizontal" Margin="10">
                                             <StackPanel>
                                                 <TextBlock Text="CEI" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
@@ -178,7 +178,7 @@
 
                                 <!--ADD TICKERS HERE-->
 
-                                <Button Style="{StaticResource TickerButtonTheme}">
+                                <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
                                     <StackPanel Orientation="Horizontal" Margin="10">
                                         <StackPanel>
                                             <TextBlock Text="AMC" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
@@ -191,7 +191,7 @@
                                         <Image Height="39" Stretch="Fill" Source="/Images/line_chart.png" Margin="70, -10, 0, 0" Width="128"/>
                                     </StackPanel>
                                 </Button>
-                                <Button Style="{StaticResource TickerButtonTheme}">
+                                <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
                                     <StackPanel Orientation="Horizontal" Margin="10">
                                         <StackPanel>
                                             <TextBlock Text="AAPL" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
@@ -208,7 +208,7 @@
                                         </Image>
                                     </StackPanel>
                                 </Button>
-                                <Button Style="{StaticResource TickerButtonTheme}">
+                                <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
                                     <StackPanel Orientation="Horizontal" Margin="10">
                                         <StackPanel>
                                             <TextBlock Text="BTE.TO" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
@@ -221,7 +221,7 @@
                                         <Image Height="39" Stretch="Fill" Source="/Images/line_chart.png" Margin="70, -10, 0, 0" Width="128"/>
                                     </StackPanel>
                                 </Button>
-                                <Button Style="{StaticResource TickerButtonTheme}">
+                                <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
                                     <StackPanel Orientation="Horizontal" Margin="10">
                                         <StackPanel>
                                             <TextBlock Text="CEI" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>

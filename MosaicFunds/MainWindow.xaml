@@ -17,7 +17,7 @@
     <Window.DataContext>
         <viewModel:MainViewModel/>
     </Window.DataContext>
-    
+
 
     <Border CornerRadius="20">
         <Border.Background>
@@ -28,13 +28,13 @@
         </Border.Background>
 
         <Grid>
-            
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Border Grid.Row="1">
+            <Border Grid.Row="1" CornerRadius="20">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                         <GradientStop Color="#343155" Offset="0"/>
@@ -53,9 +53,11 @@
                 Margin="20, 40, 0, 40"/>
 
                     <RadioButton
+                    x:Name="dashboardButton"
+                    Click="RadioButton_Click"
                     Content="Dashboard"
                     Height="50"
-                    Margin="10, 10, 0, 0"
+                    Margin="0,10,0,0"
                     Foreground="White"
                     FontSize="14"
                     FontFamily="/Fonts/#Poppins"
@@ -64,9 +66,11 @@
                     Command="{Binding DashboardCommand}"/>
 
                     <RadioButton
+                    x:Name="discoverButton"
+                    Click="RadioButton_Click"
                     Content="Discover"
                     Height="50"
-                    Margin="10, 10, 0, 0"
+                    Margin="0,10,0,0"
                     Foreground="White"
                     FontSize="14"
                     FontFamily="/Fonts/#Poppins"
@@ -74,9 +78,10 @@
                     Command="{Binding DiscoverCommand}"/>
 
                     <RadioButton
+                    Click="RadioButton_Click"
                     Content="News"
                     Height="50"
-                    Margin="10, 10, 0, 0"
+                    Margin="0,10,0,0"
                     Foreground="White"
                     FontSize="14"
                     FontFamily="/Fonts/#Poppins"
@@ -84,9 +89,10 @@
                     Command="{Binding NewsCommand}"/>
 
                     <RadioButton
+                    Click="RadioButton_Click"
                     Content="Transactions"
                     Height="50"
-                    Margin="10, 10, 0, 0"
+                    Margin="0,10,0,0"
                     Foreground="White"
                     FontSize="14"
                     FontFamily="/Fonts/#Poppins"
@@ -94,12 +100,26 @@
                     Command="{Binding TransactionsCommand}"/>
 
                     <RadioButton
+                    Click="RadioButton_Click"
                     Content="Settings"
                     Height="50"
-                    Margin="10, 10, 0, 0"    
+                    Margin="0,10,0,0"    
                     Foreground="White"
                     FontSize="14"
                     FontFamily="/Fonts/#Poppins"
+                    Style="{StaticResource SideMenuButtonTheme}"
+                    Command="{Binding SettingsCommand}"/>
+
+                    <RadioButton
+                    x:Name="backButton"
+                    Click="backButton_Click"
+                    Content="Back"
+                    Height="50"
+                    Margin="0, 50, 0, 0"    
+                    Foreground="White"
+                    FontSize="14"
+                    FontFamily="/Fonts/#Poppins"
+                    Visibility="Hidden"
                     Style="{StaticResource SideMenuButtonTheme}"/>
 
                 </StackPanel>
@@ -110,7 +130,7 @@
                 Content="{Binding CurrentView}"/>
 
         </Grid>
-        
+
     </Border>
-    
+
 </Window>

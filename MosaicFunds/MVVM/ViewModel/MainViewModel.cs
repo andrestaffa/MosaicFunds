@@ -11,6 +11,10 @@ namespace MosaicFunds.MVVM.ViewModel
     class MainViewModel : ObservableObject 
     {
 
+        // Page buffer
+
+        public List<object> pageBuffer = new List<object>();
+
         public RelayCommand DashboardCommand { get; set; }
         public RelayCommand DiscoverCommand { get; set; }
         public RelayCommand NewsCommand { get; set; }
@@ -47,7 +51,7 @@ namespace MosaicFunds.MVVM.ViewModel
             DashboardCommand = new RelayCommand(o => { this.CurrentView = this.DashboardVM; });
             DiscoverCommand = new RelayCommand(o => { this.CurrentView = this.DiscoverVM; });
             NewsCommand = new RelayCommand(o => { this.CurrentView = this.NewsViewModel; });
-            TransactionsCommand = new RelayCommand(o => { this.CurrentView = this.InfoViewModel; });
+            TransactionsCommand = new RelayCommand(o => { });
             SettingsCommand = new RelayCommand(o => { });
         }
 
