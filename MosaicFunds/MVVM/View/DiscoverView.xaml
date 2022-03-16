@@ -5,21 +5,22 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MosaicFunds.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="645" d:DesignWidth="1080">
+             d:DesignHeight="720" d:DesignWidth="1080">
 
     <StackPanel Orientation="Vertical">
-        <TextBox
+        <ScrollViewer Height="692" VerticalScrollBarVisibility="Visible" Margin="0,10,10,0">
+            <StackPanel Orientation="Vertical">
+
+                <TextBox
                 Width="250"
                 Height="40"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
-                Margin="0, 20, 0, 10"
+                Margin="0, 50, 0, 10"
                 Grid.Column="1"
                 Style="{StaticResource SearchBoxTheme}"/>
-        <ScrollViewer Height="565" VerticalScrollBarVisibility="Visible">
-            <StackPanel Orientation="Vertical">
 
-                <TextBlock Margin="100, 20, 0, 0" 
+                <TextBlock Margin="100, 40, 0, 0" 
                            VerticalAlignment="Center" 
                            HorizontalAlignment="Left" 
                            Text="Global Markets" 
@@ -27,15 +28,92 @@
                            FontFamily="/Fonts/#Poppins" 
                            FontWeight="Bold" 
                            FontSize="25"/>
-                
+
+                <Image Height="450" Width="900" Stretch="Fill" Source="/Images/world_map.png" Margin="0, 40, 0, 0"/>
+
+                <Button Click="Button_Click" Width="50" Height="50" Foreground="Green" Style="{StaticResource GlobalMarketButtonTheme}"
+                        Margin="-410, -625, 0, 0">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="NASDAQ" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="+0.28%" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="-2, 0, 0, 0"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Click="Button_Click" Width="50" Height="50" Foreground="Green" Style="{StaticResource GlobalMarketButtonTheme}"
+                        Margin="-550, -680, 0, 0">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="TSX" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="+0.34%" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="-2, 0, 0, 0"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Click="Button_Click" Width="50" Height="50" Foreground="Green" Style="{StaticResource GlobalMarketButtonTheme}"
+                        Margin="-25, -650, 0, 0">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="FTSE" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="+0.53%" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="-2, 0, 0, 0"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Click="Button_Click" Width="50" Height="50" Foreground="Green" Style="{StaticResource GlobalMarketButtonTheme}"
+                        Margin="-620, -450, 0, 0">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="S&amp;P 500" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="+0.73%" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="-2, 0, 0, 0"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Click="Button_Click" Width="50" Height="50" Foreground="Green" Style="{StaticResource GlobalMarketButtonTheme}"
+                        Margin="390, -500, 0, 0">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="BSE" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="+1.68%" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="-2, 0, 0, 0"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Click="Button_Click" Width="50" Height="50" Foreground="Green" Style="{StaticResource GlobalMarketButtonTheme}"
+                        Margin="350, -300, 0, 0">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="Nifty" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="+0.43%" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="-2, 0, 0, 0"/>
+                    </StackPanel>
+                </Button>
+
+                <!--MAKE RED-->
+
+                <Button Click="Button_Click" Width="50" Height="50" Foreground="Red" Style="{StaticResource GlobalMarketButtonRedTheme}"
+                        Margin="-500, -525, 0, 0">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="DJI" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="-0.56%" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="-2, 0, 0, 0"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Click="Button_Click" Width="50" Height="50" Foreground="Red" Style="{StaticResource GlobalMarketButtonRedTheme}"
+                        Margin="+525, -630, 0, 0">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="China" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="-3.49%" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="-2, 0, 0, 0"/>
+                    </StackPanel>
+                </Button>
+
+                <Button Click="Button_Click" Width="50" Height="50" Foreground="Red" Style="{StaticResource GlobalMarketButtonRedTheme}"
+                        Margin="600, -500, 0, 0">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Text="SSE" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="-2.60%" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="-2, 0, 0, 0"/>
+                    </StackPanel>
+                </Button>
+
+
                 <StackPanel Orientation="Horizontal">
 
-                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="SPX" 
                                            Foreground="White"
@@ -110,15 +188,15 @@
                                 </StackPanel>
                             </StackPanel>
                         </Button>
-                        
+
                     </Border>
 
-                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="NASDAQ" 
                                            Foreground="White"
@@ -193,19 +271,19 @@
                                 </StackPanel>
                             </StackPanel>
                         </Button>
-                        
+
                     </Border>
-                    
+
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
 
-                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="DJI" 
                                            Foreground="White"
@@ -283,12 +361,12 @@
 
                     </Border>
 
-                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="TSX" 
                                            Foreground="White"
@@ -379,12 +457,12 @@
 
                 <StackPanel Orientation="Horizontal">
 
-                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="SHOP" 
                                            Foreground="White"
@@ -462,12 +540,12 @@
 
                     </Border>
 
-                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="NINE" 
                                            Foreground="White"
@@ -549,12 +627,12 @@
 
                 <StackPanel Orientation="Horizontal">
 
-                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="ENSV" 
                                            Foreground="White"
@@ -632,12 +710,12 @@
 
                     </Border>
 
-                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="LAC" 
                                            Foreground="White"
@@ -728,12 +806,12 @@
 
                 <StackPanel Orientation="Horizontal">
 
-                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="PBF" 
                                            Foreground="White"
@@ -811,12 +889,12 @@
 
                     </Border>
 
-                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="CORZ" 
                                            Foreground="White"
@@ -898,12 +976,12 @@
 
                 <StackPanel Orientation="Horizontal">
 
-                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="CSIQ" 
                                            Foreground="White"
@@ -981,12 +1059,12 @@
 
                     </Border>
 
-                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="NKLA" 
                                            Foreground="White"
@@ -1077,12 +1155,12 @@
 
                 <StackPanel Orientation="Horizontal">
 
-                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="SHOP" 
                                            Foreground="White"
@@ -1160,12 +1238,12 @@
 
                     </Border>
 
-                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="ISRG" 
                                            Foreground="White"
@@ -1247,12 +1325,12 @@
 
                 <StackPanel Orientation="Horizontal">
 
-                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="150, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="NICMF" 
                                            Foreground="White"
@@ -1330,12 +1408,12 @@
 
                     </Border>
 
-                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+                    <Border Width="350" Margin="90, 50, 0, 0" Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="BRO" 
                                            Foreground="White"
@@ -1414,6 +1492,15 @@
                     </Border>
 
                 </StackPanel>
+
+                <TextBlock Margin="100, 0, 0, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" 
+                           Text="" 
+                           Foreground="White" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="25"/>
 
             </StackPanel>
         </ScrollViewer>

@@ -1,0 +1,652 @@
+﻿<UserControl x:Class="MosaicFunds.MVVM.View.InfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MosaicFunds.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="1080">
+
+    <Grid>
+
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical">
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,176,0">
+                    <Border Margin="20" Width="300" Height="450" HorizontalAlignment="Left" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+                        <Border.Effect>
+                            <DropShadowEffect Direction="275" BlurRadius="20"/>
+                        </Border.Effect>
+                        <StackPanel Orientation="Vertical">
+
+                            <RadioButton x:Name="watchlistButton" Click="watchlistButton_Click" Margin="20, 30, 0, 0" Content="Add to Watchlist"
+                                     Foreground="DarkGray"
+                                     FontFamily="/Fonts/#Poppins"
+                                     FontWeight="Light"
+                                     FontSize="12"/>
+
+                            <TextBlock Margin="20, 30, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="AMC" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="20"/>
+
+                            <TextBlock Margin="20, 0, 0, 0"
+                                   Text="AMC Theatres" 
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontSize="13" 
+                                   FontWeight="UltraLight"/>
+
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Margin="70, 25, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="USD" 
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Light" 
+                                   FontSize="13"/>
+                                <TextBlock Text="$15.62"
+                                   Margin="110, -20, 0, 0"
+                                   Foreground="#4692BA"
+                                   FontFamily="/Fonts/#Poppins"
+                                   FontSize="35"
+                                   FontWeight="Heavy"/>
+
+                            </StackPanel>
+
+
+                            <StackPanel Orientation="Horizontal" Margin="-20, 50, 0, 0">
+
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="Volume"
+                                           Margin="40, 15, 0, 0"
+                                           Foreground="White"
+                                           FontFamily="/Fonts/#Poppins"
+                                           FontSize="15"
+                                           FontWeight="Heavy"/>
+                                    <TextBlock Text="36.4M"
+                                           Margin="35, 10, 0, 0"
+                                           HorizontalAlignment="Center"
+                                           Foreground="DarkGray"
+                                           FontFamily="/Fonts/#Poppins"
+                                           FontSize="15"
+                                           FontWeight="Heavy"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="Change"
+                                           Margin="25, 15, 0, 0"
+                                           Foreground="White"
+                                           FontFamily="/Fonts/#Poppins"
+                                           FontSize="15"
+                                           FontWeight="Heavy"/>
+                                    <TextBlock Text="+4.47"
+                                           Margin="22, 10, 0, 0"
+                                           HorizontalAlignment="Center"
+                                           Foreground="#00FF00"
+                                           FontFamily="/Fonts/#Poppins"
+                                           FontSize="15"
+                                           FontWeight="Heavy"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="Change %"
+                                           Margin="25, 15, 0, 0"
+                                           Foreground="White"
+                                           FontFamily="/Fonts/#Poppins"
+                                           FontSize="15"
+                                           FontWeight="Heavy"/>
+                                    <TextBlock Text="+5.89%"
+                                           Margin="15, 10, 0, 0"
+                                           HorizontalAlignment="Center"
+                                           Foreground="#00FF00"
+                                           FontFamily="/Fonts/#Poppins"
+                                           FontSize="15"
+                                           FontWeight="Heavy"/>
+                                </StackPanel>
+
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" Margin="-20, 10, 0, 0">
+
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="Shares"
+                                           HorizontalAlignment="Center"
+                                           Margin="42, 15, 0, 0"
+                                           Foreground="White"
+                                           FontFamily="/Fonts/#Poppins"
+                                           FontSize="15"
+                                           FontWeight="Heavy"/>
+                                    <TextBlock Text="8,365"
+                                           Margin="40, 10, 0, 0"
+                                           HorizontalAlignment="Center"
+                                           Foreground="DarkGray"
+                                           FontFamily="/Fonts/#Poppins"
+                                           FontSize="15"
+                                           FontWeight="Heavy"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="Value"
+                                           HorizontalAlignment="Center"
+                                           Margin="25, 15, 0, 0"
+                                           Foreground="White"
+                                           FontFamily="/Fonts/#Poppins"
+                                           FontSize="15"
+                                           FontWeight="Heavy"/>
+                                    <TextBlock Text="$130.66K"
+                                           Margin="30, 10, 0, 0"
+                                           HorizontalAlignment="Center"
+                                           Foreground="DarkGray"
+                                           FontFamily="/Fonts/#Poppins"
+                                           FontSize="15"
+                                           FontWeight="Heavy" RenderTransformOrigin="0.018,0.545"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock Text="P&amp;L"
+                                           Margin="25, 15, 0, 0"
+                                           Foreground="White"
+                                           FontFamily="/Fonts/#Poppins"
+                                           FontSize="15"
+                                           HorizontalAlignment="Center"
+                                           FontWeight="Heavy"/>
+
+                                    <TextBlock Text="+$5,461.32"
+                                           Margin="25, 10, 0, 0"
+                                           Foreground="#00FF00"
+                                           FontFamily="/Fonts/#Poppins"
+                                           FontSize="15"
+                                           FontWeight="Heavy"/>
+                                </StackPanel>
+
+                            </StackPanel>
+
+
+                        </StackPanel>
+                    </Border>
+
+                    <Border Margin="-5, 0, 0, 0" Width="550" Height="450" HorizontalAlignment="Left" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+                        <Border.Effect>
+                            <DropShadowEffect Direction="275" BlurRadius="20"/>
+                        </Border.Effect>
+
+                        <StackPanel Orientation="Vertical">
+
+                            <Button Margin="20" Foreground="Transparent" HorizontalAlignment="Left" VerticalAlignment="Center" Width="35" Height="35" Style="{StaticResource InfoButtonTheme}">
+                                <Image Source="/Images/info_button.png"></Image>
+                            </Button>
+
+                            <Image Height="325" Width="475" Source="/Images/line_chart.png" Margin="35,-30,35,65" RenderTransformOrigin=".5, .5"/>
+
+                            <StackPanel Orientation="Horizontal">
+                                <RadioButton Content="1D" FontFamily="/Fonts/#Poppins" FontSize="13" FontWeight="Bold" Style="{StaticResource DataIntervalButtonTheme}" 
+                                     Margin="75, -50, 0, 50" IsChecked="True"/>
+                                <RadioButton Content="1W" FontFamily="/Fonts/#Poppins" FontSize="13" FontWeight="Bold" Style="{StaticResource DataIntervalButtonTheme}" 
+                                     Margin="75, -50, 0, 50"/>
+                                <RadioButton Content="1M" FontFamily="/Fonts/#Poppins" FontSize="13" FontWeight="Bold" Style="{StaticResource DataIntervalButtonTheme}" 
+                                     Margin="75, -50, 0, 50"/>
+                                <RadioButton Content="1Y" FontFamily="/Fonts/#Poppins" FontSize="13" FontWeight="Bold" Style="{StaticResource DataIntervalButtonTheme}" 
+                                     Margin="75, -50, 0, 50"/>
+                                <RadioButton Content="5Y" FontFamily="/Fonts/#Poppins" FontSize="13" FontWeight="Bold" Style="{StaticResource DataIntervalButtonTheme}" 
+                                     Margin="75, -50, 0, 50"/>
+                            </StackPanel>
+
+                        </StackPanel>
+
+
+
+                    </Border>
+                </StackPanel>
+
+                <Border Margin="15, 0, 0, 0" Width="870" Height="200" HorizontalAlignment="Left" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+                    <Border.Effect>
+                        <DropShadowEffect Direction="275" BlurRadius="20"/>
+                    </Border.Effect>
+
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Margin="0, 60, 0, 0" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                            <Button x:Name="sellButton" Click="sellButton_Click" Background="Red"
+                                Width="150"
+                                Height="70"
+                                Style="{StaticResource SellButtonTheme}">
+
+                                <TextBlock
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Center" 
+                                   Text="SELL" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="UltraBold" 
+                                   FontSize="40"/>
+
+                            </Button>
+
+                            <StackPanel Orientation="Vertical" Margin="45, 0, 0, 0">
+                                <TextBlock
+                                   VerticalAlignment="Top" 
+                                   HorizontalAlignment="Center" 
+                                   Text="Shares" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="UltraBold" 
+                                   FontSize="20"/>
+                                <TextBox x:Name="sharesTextBox"
+                                     KeyDown="sharesTextBox_KeyDown"
+                                     Width="60"
+                                     Height="20"
+                                     TextAlignment="Center"
+                                     Margin="0, 10, 0, 0"
+                                     Text="55555"
+                                     FontWeight="Bold"
+                                     FontFamily="/Fonts/#Poppins"
+                                     Padding="0, 2, 0, 0"    
+                                     Foreground="#4692BA"
+                                     BorderThickness="0"
+                                     Background="#21203b"    
+                                     >
+                                    <TextBox.Resources>
+                                        <Style TargetType="{x:Type Border}">
+                                            <Setter Property="CornerRadius" Value="5"/>
+                                        </Style>
+                                    </TextBox.Resources>
+                                </TextBox>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Margin="75, 0, 0, 0">
+                                <TextBlock
+                                   VerticalAlignment="Top" 
+                                   HorizontalAlignment="Center" 
+                                   Text="Price" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="UltraBold" 
+                                   FontSize="20"/>
+                                <TextBlock x:Name="priceLabel"
+                                   VerticalAlignment="Top" 
+                                   HorizontalAlignment="Center" 
+                                   Text="$15.62" 
+                                   Foreground="#4692BA" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="UltraBold" 
+                                   FontSize="20"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" Margin="75, 0, 0, 0">
+                                <TextBlock
+                                   VerticalAlignment="Top" 
+                                   HorizontalAlignment="Center" 
+                                   Text="Est. Cost" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="UltraBold" 
+                                   FontSize="20"/>
+                                <TextBlock x:Name="estCostLabel"
+                                   VerticalAlignment="Top" 
+                                   HorizontalAlignment="Center" 
+                                   Text="$500.62" 
+                                   Foreground="#4692BA" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="UltraBold" 
+                                   FontSize="20"/>
+                            </StackPanel>
+
+                            <Button x:Name="buyButton" Click="buyButton_Click" Margin="50, 0, 0, 0"
+                                Background="DarkGreen"
+                                Width="150"
+                                Height="70"
+                                Style="{StaticResource BuyButtonTheme}">
+
+                                <TextBlock
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Center" 
+                                   Text="BUY" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="UltraBold" 
+                                   FontSize="40"/>
+
+                            </Button>
+
+
+                        </StackPanel>
+
+                        <Slider x:Name="_slider" 
+                            ValueChanged="_slider_ValueChanged"
+                            Value="250"
+                            Minimum="5"
+                            Maximum="8365" 
+                            TickFrequency="5" 
+                            IsSnapToTickEnabled="True" 
+                            Margin="200, 20, 200, 0"
+                            Style="{StaticResource Horizontal_Slider}"/>
+
+                    </StackPanel>
+                </Border>
+
+
+            </StackPanel>
+
+            <Border Margin="-160,20,-160,28" Width="165" HorizontalAlignment="Left" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+                <Border.Effect>
+                    <DropShadowEffect Direction="275" BlurRadius="20"/>
+                </Border.Effect>
+
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Margin="0, 15, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Center" 
+                                   Text="Recent News" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="18"/>
+
+                    <ScrollViewer Height="617" VerticalScrollBarVisibility="Hidden" Margin="0,10,0,0">
+                        <StackPanel Orientation="Vertical">
+
+                            <Border Width="150" Margin="2, 15, 0, 0" Height="200" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+                                <Border.Effect>
+                                    <DropShadowEffect Direction="275" BlurRadius="20"/>
+                                </Border.Effect>
+
+                                <Button Height="200" Style="{StaticResource NewsButtonTheme}">
+                                    <StackPanel Orientation="Vertical">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="7, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="SYNA" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="10"/>
+                                            <TextBlock Margin="5, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="+8.02%" 
+                                       Foreground="#00ff00" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="10"/>
+                                            <TextBlock Margin="7, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="OVV" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="10"/>
+                                            <TextBlock Margin="5, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="-1.64%" 
+                                       Foreground="Red" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="10"/>
+                                        </StackPanel>
+
+                                        <TextBlock Margin="5, 15, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="The Big Long" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+
+                                        <TextBlock Margin="5, 10, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="The Russel 2000 is at&#10;a short interest above&#10;45% and is primed for&#10;a parbolic squeeze." 
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="12"/>
+
+                                        <TextBlock Margin="0, 30, 10, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Right" 
+                                   Text="March 14, 2022" 
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="10"/>
+
+                                    </StackPanel>
+                                </Button>
+
+                            </Border>
+
+                            <Border Width="150" Margin="2, 15, 0, 0" Height="200" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+                                <Border.Effect>
+                                    <DropShadowEffect Direction="275" BlurRadius="20"/>
+                                </Border.Effect>
+
+                                <Button Height="200" Style="{StaticResource NewsButtonTheme}">
+                                    <StackPanel Orientation="Vertical">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Margin="7, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="TTEK" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="10"/>
+                                            <TextBlock Margin="5, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="+1.76%" 
+                                       Foreground="#00ff00" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="10"/>
+                                            <TextBlock Margin="7, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="HYMC" 
+                                       Foreground="White" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="10"/>
+                                            <TextBlock Margin="5, 10, 0, 0" 
+                                       VerticalAlignment="Center" 
+                                       HorizontalAlignment="Left" 
+                                       Text="+9.35%" 
+                                       Foreground="#00ff00" 
+                                       FontFamily="/Fonts/#Poppins" 
+                                       FontWeight="Bold" 
+                                       FontSize="10"/>
+                                        </StackPanel>
+
+                                        <TextBlock Margin="5, 15, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="AMC Bought&#10;a Gold Mine" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+
+                                        <TextBlock Margin="5, 10, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="AMC just purchased&#10;22% of Hycroft Mining&#10;(NASDAQ: HYMC)"
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="12"/>
+
+                                        <TextBlock Margin="0, 30, 10, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Right" 
+                                   Text="March 14, 2022" 
+                                   Foreground="DarkGray" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="10"/>
+
+                                    </StackPanel>
+                                </Button>
+
+                            </Border>
+
+
+                        </StackPanel>
+                    </ScrollViewer>
+
+                </StackPanel>
+
+            </Border>
+
+        </StackPanel>
+        
+        
+
+        <Border x:Name="dimBackground" Width="1080" Height="720" Background="Black" Opacity="0.75"
+                Visibility="Hidden"/>
+
+        <!--Confirmation BUY Panel-->
+        
+        <Border x:Name="confirmationPanel" Width="450" Height="365" BorderBrush="Transparent" BorderThickness="1" CornerRadius="15" Background="#2e274c"
+                Visibility="Hidden">
+            <Border.Effect>
+                <DropShadowEffect Direction="275" BlurRadius="20"/>
+            </Border.Effect>
+
+            <StackPanel Orientation="Vertical">
+                <TextBlock Margin="5, 15, 0, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Center" 
+                           Text="Confirm Transaction&#10;             (AMC)" 
+                           Foreground="White" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="20"/>
+                <DockPanel>
+                    <TextBlock Margin="15, 25, 0, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" 
+                           Text="Number of Shares: " 
+                           Foreground="DarkGray" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="15"/>
+                    <TextBlock x:Name="confirmSharesTextBlock" Margin="0, 25, 30, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Right" 
+                           Text="800" 
+                           Foreground="#4692BA" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="15"/>
+                </DockPanel>
+
+                <DockPanel>
+                    <TextBlock Margin="15, 15, 0, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" 
+                           Text="Market Price: " 
+                           Foreground="DarkGray" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="15"/>
+                    <TextBlock Margin="0, 25, 30, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Right" 
+                           Text="$15.62" 
+                           Foreground="#4692BA" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="15"/>
+                </DockPanel>
+
+                <DockPanel>
+                    <TextBlock x:Name="confirmEstCostLabel_static" Margin="15, 15, 0, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" 
+                           Text="Estimated Cost: " 
+                           Foreground="DarkGray" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="15"/>
+                    <TextBlock x:Name="confirmEstCostLabel" Margin="0, 25, 30, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Right" 
+                           Text="$500.62" 
+                           Foreground="#4692BA" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="15"/>
+                </DockPanel>
+
+                <DockPanel>
+                    <TextBlock Margin="15, 15, 0, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" 
+                           Text="New Balance: " 
+                           Foreground="DarkGray" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="15"/>
+                    <TextBlock x:Name="confirmNewBalanceLabel" Margin="0, 25, 30, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Right" 
+                           Text="$516,935.78" 
+                           Foreground="#4692BA" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="15"/>
+                </DockPanel>
+
+                <DockPanel Margin="30">
+                    <Button x:Name="cancelButton" Click="cancelButton_Click" Margin="65, 0, 0, 0"
+                                Background="#21203b"
+                                Width="100"
+                                Height="50"
+                                Style="{StaticResource CancelButtonTheme}">
+                        <TextBlock
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Center" 
+                                   Text="Cancel" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="UltraBold" 
+                                   FontSize="20"/>
+                    </Button>
+                    <Button x:Name="confirmButton" Click="confirmButton_Click" Margin="0, 0, 0, 0"
+                                Background="DarkGreen"
+                                Width="100"
+                                Height="50"
+                                Style="{StaticResource ConfirmBuyButtonTheme}">
+                        <TextBlock x:Name="confirmButtonTextBlock"
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Center" 
+                                   Text="BUY" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="UltraBold" 
+                                   FontSize="20"/>
+                    </Button>
+                </DockPanel>
+
+            </StackPanel>
+            
+        </Border>
+       
+
+    </Grid>
+    
+   
+
+
+
+
+</UserControl>

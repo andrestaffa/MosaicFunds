@@ -5,21 +5,35 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MosaicFunds.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="645" d:DesignWidth="1080">
+             d:DesignHeight="720" d:DesignWidth="1080">
 
-    <!--#22202f-->
+    <!--#2e274c-->
 
     <DockPanel>
         <StackPanel Orientation="Vertical">
 
-            <Border Margin="10" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
+            <Border Margin="20, 35, 20, 20" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                 <Border.Effect>
                     <DropShadowEffect Direction="275" BlurRadius="20"/>
                 </Border.Effect>
                 <StackPanel Orientation="Vertical">
-                    <TextBlock Margin="20" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Profit &amp; Loss" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold" FontSize="18"/>
+                    <TextBlock Margin="20, 10, 0, 0" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Profit &amp; Loss" Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontWeight="Bold" FontSize="18"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="20, 0, 0, 0" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Left" 
+                               Text="$517,436.43" Foreground="White" 
+                               FontFamily="/Fonts/#Poppins"
+                               FontWeight="Bold" FontSize="25"/>
+                        <TextBlock Margin="10, 0, 0, 0" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Left" 
+                               Text="+16,436" Foreground="#00ff00" 
+                               FontFamily="/Fonts/#Poppins"
+                               FontWeight="Bold" FontSize="18"/>
+                    </StackPanel>
                     <!--<Image Height="300" Stretch="Fill" Source="/Images/OHLC.png"/>-->
-                    <Image Height="285" Width="800" Source="/Images/line_chart.png" Margin="-40, -40, 0, 0" RenderTransformOrigin=".5, .5">
+                    <Image Height="325" Width="800" Source="/Images/line_chart.png" Margin="-40, -40, 0, 0" RenderTransformOrigin=".5, .5">
                         <Image.RenderTransform>
                             <RotateTransform Angle="7" />
                         </Image.RenderTransform>
@@ -39,150 +53,150 @@
                                      Margin="100, -10, 0, 10"/>
                         <RadioButton Content="5Y" FontFamily="/Fonts/#Poppins" FontSize="13" FontWeight="Bold" Style="{StaticResource DataIntervalButtonTheme}" 
                                      Margin="100, -10, 0, 10"/>
-                        
+
 
                     </StackPanel>
 
                 </StackPanel>
             </Border>
 
-                <DockPanel Height="280">
-                    <Border Margin="10" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
-                        <Border.Effect>
-                            <DropShadowEffect Direction="275" BlurRadius="20"/>
-                        </Border.Effect>
+            <DockPanel Height="280">
+                <Border Margin="20" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+                    <Border.Effect>
+                        <DropShadowEffect Direction="275" BlurRadius="20"/>
+                    </Border.Effect>
                     <DockPanel>
                         <StackPanel Orientation="Vertical">
                             <TextBlock Margin="20" VerticalAlignment="Center" HorizontalAlignment="Left" Text="My Portfolio" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold" FontSize="18"/>
                             <Border Width="540" Height="35" Background="Transparent">
-                                    <DockPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Label Content="All" HorizontalAlignment="Left" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="20, 0, 0, 0"/>
-                                            <Label Content="Shares" HorizontalAlignment="Left"  Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="130, 0, 0, 0"/>
-                                            <Label Content="Last Price" HorizontalAlignment="Left"  Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="65, 0, 0, 0"/>
-                                            <Label Content="Change" HorizontalAlignment="Left"  Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="50, 0, 0, 0"/>
-                                        </StackPanel>
-                                    </DockPanel>
-                                </Border>
-
-                                <ScrollViewer Width="517" Height="140" Margin="0, 0, 0, 0" VerticalScrollBarVisibility="Visible">
-                                    <StackPanel Orientation="Vertical">
-
-                                        <!--ADD TICKERS HERE-->
-
-                                        <Button Style="{StaticResource TickerButtonTheme}">
-                                            <StackPanel Orientation="Horizontal" Margin="10">
-                                                <StackPanel>
-                                                    <TextBlock Text="AMC" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                                    <TextBlock Text="AMC Theatres" Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
-                                                </StackPanel>
-                                                <TextBlock Text="8,365" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold" Margin="100, 0, 0, 0"/>
-                                                <StackPanel Margin="100, 0, 0, 0">
-                                                    <TextBlock Text="$15.21" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                                <TextBlock Text="+5.89%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
-                                                </StackPanel>
-                                                <StackPanel Margin="75, 0, 0, 0">
-                                                    <TextBlock Text="+$5,461.32" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                                <TextBlock Text="+8.21%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
-                                                </StackPanel>
-                                            </StackPanel>
-                                        </Button>
-                                        <Button Style="{StaticResource TickerButtonTheme}">
-                                            <StackPanel Orientation="Horizontal" Margin="10">
-                                                <StackPanel>
-                                                    <TextBlock Text="AAPL" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                                    <TextBlock Text="Apple Inc." Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
-                                                </StackPanel>
-                                                <TextBlock Text="2,812" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold" Margin="123, 0, 0, 0"/>
-                                                <StackPanel Margin="90, 0, 0, 0">
-                                                    <TextBlock Text="$159.30" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                                    <TextBlock Text="-2.37%" Foreground="Red" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
-                                                </StackPanel>
-                                                <StackPanel Margin="75, 0, 0, 0">
-                                                    <TextBlock Text="-$3,653.32" Foreground="Red" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                                    <TextBlock Text="-1.88%" Foreground="Red" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
-                                                </StackPanel>
-                                            </StackPanel>
-                                        </Button>
-                                        <Button Style="{StaticResource TickerButtonTheme}">
-                                            <StackPanel Orientation="Horizontal" Margin="10">
-                                                <StackPanel>
-                                                    <TextBlock Text="BTE.TO" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                                    <TextBlock Text="Baytex Energy" Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
-                                                </StackPanel>
-                                                <TextBlock Text="15,426" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold" Margin="95, 0, 0, 0"/>
-                                                <StackPanel Margin="100, 0, 0, 0">
-                                                    <TextBlock Text="$6.08" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                                <TextBlock Text="+2.70%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
-                                                </StackPanel>
-                                                <StackPanel Margin="82, 0, 0, 0">
-                                                <TextBlock Text="+$9,197.11" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                                <TextBlock Text="+13.22%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
-                                                </StackPanel>
-                                            </StackPanel>
-                                        </Button>
-                                        <Button Style="{StaticResource TickerButtonTheme}">
-                                            <StackPanel Orientation="Horizontal" Margin="10">
-                                                <StackPanel>
-                                                    <TextBlock Text="CEI" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                                    <TextBlock Text="Camber Energy" Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
-                                                </StackPanel>
-                                                <TextBlock Text="45,122" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold" Margin="87, 0, 0, 0"/>
-                                                <StackPanel Margin="100, 0, 0, 0">
-                                                    <TextBlock Text="$1.28" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                                <TextBlock Text="+64.10%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
-                                                </StackPanel>
-                                                <StackPanel Margin="75, 0, 0, 0">
-                                                <TextBlock Text="+$33,121.11" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                                <TextBlock Text="+55.67%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
-                                                </StackPanel>
-                                            </StackPanel>
-                                        </Button>
-                                    </StackPanel>
-                                </ScrollViewer>
-                            </StackPanel>
-                        </DockPanel>
-                    </Border>
-
-                <Border Margin="10" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#22202f">
-                    <Border.Effect>
-                        <DropShadowEffect Direction="275" BlurRadius="20"/>
-                    </Border.Effect>
-                    <StackPanel Orientation="Vertical" Margin="0,0,0, 0">
-                        <TextBlock Margin="20" VerticalAlignment="Center" HorizontalAlignment="left" Text="My Watchlist" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold" FontSize="18"/>
-                            <Border Width="538" Height="35" Background="Transparent">
                                 <DockPanel>
                                     <StackPanel Orientation="Horizontal">
-                                    <Label Content="All" HorizontalAlignment="Left" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="20, 0, 0, 0"/>
-                                    <Label Content="Last Price" HorizontalAlignment="Left"  Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="130, 0, 0, 0"/>
-                                    <Label Content="Chart" HorizontalAlignment="Left"  Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="85, 0, 0, 0"/>
-                                </StackPanel>
+                                        <Label Content="All" HorizontalAlignment="Left" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="20, 0, 0, 0"/>
+                                        <Label Content="Shares" HorizontalAlignment="Left"  Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="130, 0, 0, 0"/>
+                                        <Label Content="Last Price" HorizontalAlignment="Left"  Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="65, 0, 0, 0"/>
+                                        <Label Content="Change" HorizontalAlignment="Left"  Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="50, 0, 0, 0"/>
+                                    </StackPanel>
                                 </DockPanel>
                             </Border>
-                            <ScrollViewer Width="477" Height="140" VerticalScrollBarVisibility="Visible">
+
+                            <ScrollViewer Width="517" Height="140" Margin="0, 0, 0, 0" VerticalScrollBarVisibility="Visible">
                                 <StackPanel Orientation="Vertical">
 
                                     <!--ADD TICKERS HERE-->
 
-                                    <Button Style="{StaticResource TickerButtonTheme}">
+                                    <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
                                         <StackPanel Orientation="Horizontal" Margin="10">
                                             <StackPanel>
                                                 <TextBlock Text="AMC" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
                                                 <TextBlock Text="AMC Theatres" Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
                                             </StackPanel>
+                                            <TextBlock Text="8,365" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold" Margin="100, 0, 0, 0"/>
+                                            <StackPanel Margin="100, 0, 0, 0">
+                                                <TextBlock Text="$15.21" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                                <TextBlock Text="+5.89%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
+                                            </StackPanel>
+                                            <StackPanel Margin="75, 0, 0, 0">
+                                                <TextBlock Text="+$5,461.32" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                                <TextBlock Text="+8.21%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
+                                        <StackPanel Orientation="Horizontal" Margin="10">
+                                            <StackPanel>
+                                                <TextBlock Text="AAPL" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                                <TextBlock Text="Apple Inc." Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
+                                            </StackPanel>
+                                            <TextBlock Text="2,812" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold" Margin="123, 0, 0, 0"/>
+                                            <StackPanel Margin="90, 0, 0, 0">
+                                                <TextBlock Text="$159.30" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                                <TextBlock Text="-2.37%" Foreground="Red" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
+                                            </StackPanel>
+                                            <StackPanel Margin="75, 0, 0, 0">
+                                                <TextBlock Text="-$3,653.32" Foreground="Red" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                                <TextBlock Text="-1.88%" Foreground="Red" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
+                                        <StackPanel Orientation="Horizontal" Margin="10">
+                                            <StackPanel>
+                                                <TextBlock Text="BTE.TO" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                                <TextBlock Text="Baytex Energy" Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
+                                            </StackPanel>
+                                            <TextBlock Text="15,426" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold" Margin="95, 0, 0, 0"/>
+                                            <StackPanel Margin="100, 0, 0, 0">
+                                                <TextBlock Text="$6.08" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                                <TextBlock Text="+2.70%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
+                                            </StackPanel>
+                                            <StackPanel Margin="82, 0, 0, 0">
+                                                <TextBlock Text="+$9,197.11" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                                <TextBlock Text="+13.22%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Button>
+                                    <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
+                                        <StackPanel Orientation="Horizontal" Margin="10">
+                                            <StackPanel>
+                                                <TextBlock Text="CEI" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                                <TextBlock Text="Camber Energy" Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
+                                            </StackPanel>
+                                            <TextBlock Text="45,122" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold" Margin="87, 0, 0, 0"/>
+                                            <StackPanel Margin="100, 0, 0, 0">
+                                                <TextBlock Text="$1.28" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                                <TextBlock Text="+64.10%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
+                                            </StackPanel>
+                                            <StackPanel Margin="75, 0, 0, 0">
+                                                <TextBlock Text="+$33,121.11" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                                <TextBlock Text="+55.67%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Button>
+                                </StackPanel>
+                            </ScrollViewer>
+                        </StackPanel>
+                    </DockPanel>
+                </Border>
+
+                <Border Margin="20" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+                    <Border.Effect>
+                        <DropShadowEffect Direction="275" BlurRadius="20"/>
+                    </Border.Effect>
+                    <StackPanel Orientation="Vertical" Margin="0,0,0, 0">
+                        <TextBlock Margin="20" VerticalAlignment="Center" HorizontalAlignment="left" Text="My Watchlist" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold" FontSize="18"/>
+                        <Border Width="538" Height="35" Background="Transparent">
+                            <DockPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="All" HorizontalAlignment="Left" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="20, 0, 0, 0"/>
+                                    <Label Content="Last Price" HorizontalAlignment="Left"  Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="130, 0, 0, 0"/>
+                                    <Label Content="Chart" HorizontalAlignment="Left"  Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="85, 0, 0, 0"/>
+                                </StackPanel>
+                            </DockPanel>
+                        </Border>
+                        <ScrollViewer Width="433" Height="140" VerticalScrollBarVisibility="Visible">
+                            <StackPanel Orientation="Vertical">
+
+                                <!--ADD TICKERS HERE-->
+
+                                <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
+                                    <StackPanel Orientation="Horizontal" Margin="10">
+                                        <StackPanel>
+                                            <TextBlock Text="AMC" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                            <TextBlock Text="AMC Theatres" Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
+                                        </StackPanel>
                                         <StackPanel Margin="110, 0, 0, 0">
                                             <TextBlock Text="$15.21" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
                                             <TextBlock Text="+5.89%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
                                         </StackPanel>
                                         <Image Height="39" Stretch="Fill" Source="/Images/line_chart.png" Margin="70, -10, 0, 0" Width="128"/>
                                     </StackPanel>
-                                    </Button>
-                                    <Button Style="{StaticResource TickerButtonTheme}">
-                                        <StackPanel Orientation="Horizontal" Margin="10">
-                                            <StackPanel>
-                                                <TextBlock Text="AAPL" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                                <TextBlock Text="Apple Inc." Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
-                                            </StackPanel>
+                                </Button>
+                                <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
+                                    <StackPanel Orientation="Horizontal" Margin="10">
+                                        <StackPanel>
+                                            <TextBlock Text="AAPL" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                            <TextBlock Text="Apple Inc." Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
+                                        </StackPanel>
                                         <StackPanel Margin="120, 0, 0, 0">
                                             <TextBlock Text="$159.30" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
                                             <TextBlock Text="-2.37%" Foreground="Red" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
@@ -193,21 +207,21 @@
                                             </Image.RenderTransform>
                                         </Image>
                                     </StackPanel>
-                                    </Button>
-                                    <Button Style="{StaticResource TickerButtonTheme}">
-                                        <StackPanel Orientation="Horizontal" Margin="10">
-                                            <StackPanel>
-                                                <TextBlock Text="BTE.TO" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                                <TextBlock Text="Baytex Energy" Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
-                                            </StackPanel>
+                                </Button>
+                                <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
+                                    <StackPanel Orientation="Horizontal" Margin="10">
+                                        <StackPanel>
+                                            <TextBlock Text="BTE.TO" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                            <TextBlock Text="Baytex Energy" Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
+                                        </StackPanel>
                                         <StackPanel Margin="110, 0, 0, 0">
                                             <TextBlock Text="$6.08" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
                                             <TextBlock Text="+2.70%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
                                         </StackPanel>
                                         <Image Height="39" Stretch="Fill" Source="/Images/line_chart.png" Margin="70, -10, 0, 0" Width="128"/>
                                     </StackPanel>
-                                    </Button>
-                                <Button Style="{StaticResource TickerButtonTheme}">
+                                </Button>
+                                <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
                                     <StackPanel Orientation="Horizontal" Margin="10">
                                         <StackPanel>
                                             <TextBlock Text="CEI" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
@@ -221,10 +235,10 @@
                                     </StackPanel>
                                 </Button>
                             </StackPanel>
-                            </ScrollViewer>
-                        </StackPanel>
-                    </Border>
-                </DockPanel>
+                        </ScrollViewer>
+                    </StackPanel>
+                </Border>
+            </DockPanel>
 
 
         </StackPanel>

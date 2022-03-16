@@ -17,6 +17,16 @@
                 <ResourceDictionary Source="Theme/DateIntervalButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/ScrollViewerTheme.xaml"/>
                 <ResourceDictionary Source="Theme/DiscoverButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/NewsButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/GlobalMarketButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/GlobalMarketButtonRedTheme.xaml"/>
+                <ResourceDictionary Source="Theme/InfoButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/SellButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/BuyButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/SliderTheme.xaml"/>
+                <ResourceDictionary Source="Theme/CancelButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/ConfirmBuyButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/confirmSellButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModel:DashboardViewModel}">
@@ -26,7 +36,15 @@
             <DataTemplate DataType="{x:Type viewModel:DiscoverViewModel}">
                 <view:DiscoverView/>
             </DataTemplate>
-            
+
+            <DataTemplate DataType="{x:Type viewModel:NewsViewModel}">
+                <view:NewsView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:InfoViewModel}">
+                <view:InfoView/>
+            </DataTemplate>
+
         </ResourceDictionary>
         
         

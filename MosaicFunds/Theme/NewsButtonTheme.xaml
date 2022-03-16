@@ -2,15 +2,14 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:MosaicFunds.Theme">
 
-
-    <Style TargetType="{x:Type Button}" x:Key="TickerButtonTheme">
+    <Style TargetType="{x:Type Button}" x:Key="NewsButtonTheme">
         <Style.Setters>
 
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
-                        <Border Background="{TemplateBinding Background}" Height="50" CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="left" VerticalAlignment="Center"/>
+                        <Border Background="{TemplateBinding Background}" Height="{TemplateBinding Height}" CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
@@ -29,5 +28,5 @@
         </Style.Triggers>
 
     </Style>
-    
+
 </ResourceDictionary>
