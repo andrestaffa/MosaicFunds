@@ -90,7 +90,8 @@
                     Foreground="White"
                     FontSize="14"
                     FontFamily="/Fonts/#Poppins"
-                    Style="{StaticResource SideMenuButtonTheme}"/>
+                    Style="{StaticResource SideMenuButtonTheme}"
+                    Command="{Binding TransactionsCommand}"/>
 
                     <RadioButton
                     Content="Settings"
