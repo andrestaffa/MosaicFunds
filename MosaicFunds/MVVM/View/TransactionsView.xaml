@@ -1,0 +1,414 @@
+﻿<UserControl x:Class="MosaicFunds.MVVM.View.TransactionsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MosaicFunds.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="1080">
+    <Grid>
+
+        <StackPanel Orientation="Vertical">
+            <TextBlock Margin="50, 50, 0, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" 
+                           Text="Transaction History" 
+                           Foreground="White" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="35"/>
+
+            <Border Margin="50, 35, 50, -50" Height="75" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+                <Border.Effect>
+                    <DropShadowEffect Direction="275" BlurRadius="20"/>
+                </Border.Effect>
+
+                <Button Style="{StaticResource TransactionButtonTheme}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="15, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Company Name" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="52, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="35, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Symbol" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="40, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Shares" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="40, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Price" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="59, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="80, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Date" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="89, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="20, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Transaction ID" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                    </StackPanel>
+                </Button>
+
+            </Border>
+
+            <Border Margin="50, 100, 50, -50" Height="75" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="DarkGreen">
+                <Border.Effect>
+                    <DropShadowEffect Direction="275" BlurRadius="20"/>
+                </Border.Effect>
+
+                <Button Style="{StaticResource TransactionButtonTheme}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="15, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="AMC Theatres" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="75, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="AMC" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="50, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="8,365" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="50, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="$15.62" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="50, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="March 16, 2022" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="50, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="1BG5S8J4" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                    </StackPanel>
+                </Button>
+
+            </Border>
+
+            <Border Margin="50, 60, 50, -50" Height="75" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="Red">
+                <Border.Effect>
+                    <DropShadowEffect Direction="275" BlurRadius="20"/>
+                </Border.Effect>
+
+                <Button Style="{StaticResource TransactionButtonTheme}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="15, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Apple Inc." 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="107, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="APPL" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="50, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="2,812" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="56, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="$159.30" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="42, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="March 15, 2022" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="50, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="5HEY23AV" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                    </StackPanel>
+                </Button>
+
+            </Border>
+
+            <Border Margin="50, 60, 50, -50" Height="75" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="Red">
+                <Border.Effect>
+                    <DropShadowEffect Direction="275" BlurRadius="20"/>
+                </Border.Effect>
+
+                <Button Style="{StaticResource TransactionButtonTheme}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="15, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Shopify Inc." 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="95, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="SHOP" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="45, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="3,425" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="50, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="$514.95" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="42, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="March 14, 2022" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="51, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="789KDY9O" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                    </StackPanel>
+                </Button>
+
+            </Border>
+
+            <Border Margin="50, 60, 50, -50" Height="75" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="DarkGreen">
+                <Border.Effect>
+                    <DropShadowEffect Direction="275" BlurRadius="20"/>
+                </Border.Effect>
+
+                <Button Style="{StaticResource TransactionButtonTheme}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="15, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Baytex Energy" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="75, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="BTE.TO" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="36, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="24,723" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="44, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="$6.08" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="57 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="March 13, 2022" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="52 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="GASTP54B" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                    </StackPanel>
+                </Button>
+
+            </Border>
+
+            <Border Margin="50, 60, 50, -50" Height="75" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="DarkGreen">
+                <Border.Effect>
+                    <DropShadowEffect Direction="275" BlurRadius="20"/>
+                </Border.Effect>
+
+                <Button Style="{StaticResource TransactionButtonTheme}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="15, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="Camber Energy" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="62, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="CEI" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="62, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="45,122" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="47, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="$1.28" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="62, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="March 12, 2022" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                        <Border Margin="52, 0, 0, 0"  Width="2" Height="50" Background="DarkGray"/>
+                        <TextBlock Margin="45, 0, 0, 0" 
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Text="091VHQU6" 
+                                   Foreground="White" 
+                                   FontFamily="/Fonts/#Poppins" 
+                                   FontWeight="Bold" 
+                                   FontSize="15"/>
+                    </StackPanel>
+                </Button>
+
+            </Border>
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>

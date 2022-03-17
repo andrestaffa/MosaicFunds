@@ -92,7 +92,7 @@
                                             </StackPanel>
                                             <TextBlock Text="8,365" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold" Margin="100, 0, 0, 0"/>
                                             <StackPanel Margin="100, 0, 0, 0">
-                                                <TextBlock Text="$15.21" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                                <TextBlock Text="$15.62" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
                                                 <TextBlock Text="+5.89%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
                                             </StackPanel>
                                             <StackPanel Margin="75, 0, 0, 0">
@@ -185,7 +185,7 @@
                                             <TextBlock Text="AMC Theatres" Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
                                         </StackPanel>
                                         <StackPanel Margin="110, 0, 0, 0">
-                                            <TextBlock Text="$15.21" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                            <TextBlock Text="$15.62" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
                                             <TextBlock Text="+5.89%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
                                         </StackPanel>
                                         <Image Height="39" Stretch="Fill" Source="/Images/line_chart.png" Margin="70, -10, 0, 0" Width="128"/>
