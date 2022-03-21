@@ -44,7 +44,7 @@
 
                 </Border>
 
-                <Border Width="350" Margin="90, 50, 0, 0" Height="200" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+                <Border Width="350" Margin="90, 100, 0, 0" Height="200" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                     <Border.Effect>
                         <DropShadowEffect Direction="275" BlurRadius="20"/>
                     </Border.Effect>

@@ -52,7 +52,11 @@
 
             <DataTemplate DataType="{x:Type viewModel:SettingsViewModel}">
                 <view:SettingsView/>
-            </DataTemplate>          
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:NewsDisplayViewModel}">
+                <view:NewsDisplayView/>
+            </DataTemplate>
 
         </ResourceDictionary>
         
