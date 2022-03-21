@@ -27,6 +27,7 @@
                 <ResourceDictionary Source="Theme/CancelButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/ConfirmBuyButtonTheme.xaml"/>
                 <ResourceDictionary Source="Theme/confirmSellButtonTheme.xaml"/>
+                <ResourceDictionary Source="Theme/TransactionButtonTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
             <DataTemplate DataType="{x:Type viewModel:DashboardViewModel}">
@@ -44,6 +45,14 @@
             <DataTemplate DataType="{x:Type viewModel:InfoViewModel}">
                 <view:InfoView/>
             </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:TransactionViewModel}">
+                <view:TransactionsView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:SettingsViewModel}">
+                <view:SettingsView/>
+            </DataTemplate>          
 
         </ResourceDictionary>
         

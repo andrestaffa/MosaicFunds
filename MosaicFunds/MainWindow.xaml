@@ -120,6 +120,7 @@
                     FontSize="14"
                     FontFamily="/Fonts/#Poppins"
                     Visibility="Hidden"
+                                        
                     Style="{StaticResource SideMenuButtonTheme}"/>
 
                 </StackPanel>
