@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,11 @@ namespace MosaicFunds.MVVM.View
         public DashboardView()
         {
             InitializeComponent();
+
+            MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
+            this.watchListStackPanel.Children.Remove(this.amcButton);
+            if (mainViewModel.DashboardVM.addToWatchList) this.watchListStackPanel.Children.Insert(0, this.amcButton);
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -39,5 +45,6 @@ namespace MosaicFunds.MVVM.View
                 main.backButton.Visibility = Visibility.Visible;
 
         }
+
     }
 }

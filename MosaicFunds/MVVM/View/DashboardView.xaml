@@ -80,11 +80,11 @@
                             </Border>
 
                             <ScrollViewer Width="517" Height="140" Margin="0, 0, 0, 0" VerticalScrollBarVisibility="Visible">
-                                <StackPanel Orientation="Vertical">
+                                <StackPanel x:Name="watchListStackPanel" Orientation="Vertical">
 
                                     <!--ADD TICKERS HERE-->
 
-                                    <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
+                                    <Button x:Name="amcButton" Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
                                         <StackPanel Orientation="Horizontal" Margin="10">
                                             <StackPanel>
                                                 <TextBlock Text="AMC" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
@@ -194,11 +194,11 @@
                                 <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
                                     <StackPanel Orientation="Horizontal" Margin="10">
                                         <StackPanel>
-                                            <TextBlock Text="AAPL" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                            <TextBlock Text="Apple Inc." Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
+                                            <TextBlock Text="TSLA" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                            <TextBlock Text="Tesla Inc." Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
                                         </StackPanel>
                                         <StackPanel Margin="120, 0, 0, 0">
-                                            <TextBlock Text="$159.30" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                            <TextBlock Text="$1009.30" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
                                             <TextBlock Text="-2.37%" Foreground="Red" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
                                         </StackPanel>
                                         <Image Height="39" Stretch="Fill" Source="/Images/line_chart.png" Margin="70, -10, 0, 0" RenderTransformOrigin=".5, .5" Width="128">
@@ -211,12 +211,12 @@
                                 <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
                                     <StackPanel Orientation="Horizontal" Margin="10">
                                         <StackPanel>
-                                            <TextBlock Text="BTE.TO" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                            <TextBlock Text="Baytex Energy" Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
+                                            <TextBlock Text="ADBE" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                            <TextBlock Text="Adobe Inc." Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
                                         </StackPanel>
-                                        <StackPanel Margin="110, 0, 0, 0">
-                                            <TextBlock Text="$6.08" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                            <TextBlock Text="+2.70%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
+                                        <StackPanel Margin="120, 0, 0, 0">
+                                            <TextBlock Text="$422.92" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                            <TextBlock Text="-9.34%" Foreground="Red" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
                                         </StackPanel>
                                         <Image Height="39" Stretch="Fill" Source="/Images/line_chart.png" Margin="70, -10, 0, 0" Width="128"/>
                                     </StackPanel>
@@ -224,12 +224,12 @@
                                 <Button Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
                                     <StackPanel Orientation="Horizontal" Margin="10">
                                         <StackPanel>
-                                            <TextBlock Text="CEI" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                            <TextBlock Text="Camber Energy" Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
+                                            <TextBlock Text="GME" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                            <TextBlock Text="GameStop Corp." Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
                                         </StackPanel>
-                                        <StackPanel Margin="100, 0, 0, 0">
-                                            <TextBlock Text="$1.28" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                            <TextBlock Text="+64.10%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
+                                        <StackPanel Margin="95, 0, 0, 0">
+                                            <TextBlock Text="$140.15" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
+                                            <TextBlock Text="+13.81%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
                                         </StackPanel>
                                         <Image Height="39" Stretch="Fill" Source="/Images/line_chart.png" Margin="70, -10, 0, 0" Width="128"/>
                                     </StackPanel>

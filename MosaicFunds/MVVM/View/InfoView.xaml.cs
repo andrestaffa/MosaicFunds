@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MosaicFunds.MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -22,11 +23,12 @@ namespace MosaicFunds.MVVM.View
     public partial class InfoView : UserControl
     {
 
-        private bool watchListChecked = false;
+        private static bool watchListChecked = false;
 
         public InfoView()
         {
             InitializeComponent();
+            this.watchlistButton.IsChecked = watchListChecked;
         }
 
         private void buyButton_Click(object sender, RoutedEventArgs e)
@@ -107,8 +109,12 @@ namespace MosaicFunds.MVVM.View
         private void watchlistButton_Click(object sender, RoutedEventArgs e)
         {
             RadioButton radioButton = (sender as RadioButton);
-            radioButton.IsChecked = !this.watchListChecked;
-            this.watchListChecked = !this.watchListChecked;
+            radioButton.IsChecked = !watchListChecked;
+            watchListChecked = !watchListChecked;
+
+            MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
+            mainViewModel.DashboardVM.addToWatchList = watchListChecked;
+
         }
     }
 }

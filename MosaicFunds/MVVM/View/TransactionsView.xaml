@@ -83,7 +83,7 @@
 
             </Border>
 
-            <Border Margin="50, 100, 50, -50" Height="75" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="DarkGreen">
+            <Border Margin="50, 100, 50, -50" Height="75" BorderBrush="LightGreen" BorderThickness="3" CornerRadius="10" Background="DarkGreen">
                 <Border.Effect>
                     <DropShadowEffect Direction="275" BlurRadius="20"/>
                 </Border.Effect>
@@ -148,7 +148,7 @@
 
             </Border>
 
-            <Border Margin="50, 60, 50, -50" Height="75" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="Red">
+            <Border Margin="50, 60, 50, -50" Height="75" BorderBrush="#560319" BorderThickness="4" CornerRadius="10" Background="Red">
                 <Border.Effect>
                     <DropShadowEffect Direction="275" BlurRadius="20"/>
                 </Border.Effect>
@@ -213,7 +213,7 @@
 
             </Border>
 
-            <Border Margin="50, 60, 50, -50" Height="75" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="Red">
+            <Border Margin="50, 60, 50, -50" Height="75" BorderBrush="#560319" BorderThickness="4" CornerRadius="10" Background="Red">
                 <Border.Effect>
                     <DropShadowEffect Direction="275" BlurRadius="20"/>
                 </Border.Effect>
@@ -278,7 +278,7 @@
 
             </Border>
 
-            <Border Margin="50, 60, 50, -50" Height="75" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="DarkGreen">
+            <Border Margin="50, 60, 50, -50" Height="75" BorderBrush="LightGreen" BorderThickness="3" CornerRadius="10" Background="DarkGreen">
                 <Border.Effect>
                     <DropShadowEffect Direction="275" BlurRadius="20"/>
                 </Border.Effect>
@@ -343,7 +343,7 @@
 
             </Border>
 
-            <Border Margin="50, 60, 50, -50" Height="75" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="DarkGreen">
+            <Border Margin="50, 60, 50, -50" Height="75" BorderBrush="LightGreen" BorderThickness="3" CornerRadius="10" Background="DarkGreen">
                 <Border.Effect>
                     <DropShadowEffect Direction="275" BlurRadius="20"/>
                 </Border.Effect>
