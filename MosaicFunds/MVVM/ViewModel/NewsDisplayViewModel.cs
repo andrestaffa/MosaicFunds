@@ -6,15 +6,14 @@ using System.Threading.Tasks;
 
 namespace MosaicFunds.MVVM.ViewModel
 {
-    class DashboardViewModel
+    class NewsDisplayViewModel
     {
 
-        public bool addToWatchList = false;
+        public string link = "";
 
-        public DashboardViewModel() {
+        public NewsDisplayViewModel() {
 
         }
-
 
     }
 }

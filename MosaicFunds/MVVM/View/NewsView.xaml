@@ -7,8 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="1080">
 
-
-
     <StackPanel Orientation="Vertical">
         <ScrollViewer Height="692" VerticalScrollBarVisibility="Visible" Margin="0,10,10,0">
 
@@ -39,13 +37,14 @@
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Height="250" Style="{StaticResource NewsButtonTheme}">
+                        <!--https://www.cnbc.com/2022/03/21/gold-markets-ukraine-crisis-federal-reserve.html-->
+                        <Button Name="goldButton" Click="goldButton_Click" Height="250" Style="{StaticResource NewsButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Margin="10, 10, 0, 0" 
                                        VerticalAlignment="Center" 
                                        HorizontalAlignment="Left" 
-                                       Text="APPL" 
+                                       Text="XAU" 
                                        Foreground="White" 
                                        FontFamily="/Fonts/#Poppins" 
                                        FontWeight="Bold" 
@@ -53,8 +52,8 @@
                                     <TextBlock Margin="10, 10, 0, 0" 
                                        VerticalAlignment="Center" 
                                        HorizontalAlignment="Left" 
-                                       Text="+1.54%" 
-                                       Foreground="#00ff00" 
+                                       Text="-0.03%" 
+                                       Foreground="Red" 
                                        FontFamily="/Fonts/#Poppins" 
                                        FontWeight="Bold" 
                                        FontSize="15"/>
@@ -92,25 +91,25 @@
                                        FontSize="15"/>
                                 </StackPanel>
 
-                                <TextBlock Margin="10, 30, 0, 0" 
+                                <TextBlock Margin="10, 10, 0, 0" 
                                    VerticalAlignment="Center" 
                                    HorizontalAlignment="Left" 
-                                   Text="Markets Grow" 
+                                   Text="Gold gains as Ukraine&#10;fighting boosts safe-haven&#10;demand" 
                                    Foreground="White" 
                                    FontFamily="/Fonts/#Poppins" 
                                    FontWeight="Bold" 
                                    FontSize="20"/>
 
-                                <TextBlock Margin="10, 10, 0, 0" 
+                                <TextBlock Margin="10, 5, 0, 0" 
                                    VerticalAlignment="Center" 
                                    HorizontalAlignment="Left" 
-                                   Text="Markets are overall green today due to &#10;growth expenditors in the EV sector &#10;and reduced interset rates." 
+                                   Text="Gold prices rose on Monday as fighting&#10;in Ukraine boosted demand for&#10;safe-haven bullion." 
                                    Foreground="DarkGray" 
                                    FontFamily="/Fonts/#Poppins" 
                                    FontWeight="Bold" 
                                    FontSize="15"/>
 
-                                <TextBlock Margin="0, 30, 20, 0" 
+                                <TextBlock Margin="0, 5, 20, 0" 
                                    VerticalAlignment="Center" 
                                    HorizontalAlignment="Right" 
                                    Text="March 14, 2022" 
@@ -129,7 +128,8 @@
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Height="250" Style="{StaticResource NewsButtonTheme}">
+                        <!--https://www.cnbc.com/2022/03/21/oil-markets-european-union-russia-saudi-refinery-output.html-->
+                        <Button Name="brentButton" Click="brentButton_Click" Height="250" Style="{StaticResource NewsButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Margin="10, 10, 0, 0" 
@@ -182,25 +182,25 @@
                                        FontSize="15"/>
                                 </StackPanel>
 
-                                <TextBlock Margin="10, 30, 0, 0" 
+                                <TextBlock Margin="10, 10, 0, 0" 
                                    VerticalAlignment="Center" 
                                    HorizontalAlignment="Left" 
-                                   Text="Oil Surges" 
+                                   Text="Crude jumps more than 7%&#10;as EU mulls Russian oil ban" 
                                    Foreground="White" 
                                    FontFamily="/Fonts/#Poppins" 
                                    FontWeight="Bold" 
                                    FontSize="20"/>
 
-                                <TextBlock Margin="10, 10, 0, 0" 
+                                <TextBlock Margin="10, 5, 0, 0" 
                                    VerticalAlignment="Center" 
                                    HorizontalAlignment="Left" 
-                                   Text="The Ongoing crisis in Ukraine has let&#10;to a spike in commodities over the last&#10;especially in the engery sector."
+                                   Text="Oil prices soared more than 7% on&#10;Monday, with global benchmark Brent&#10;crude climbing above $115 a barrel.&#10;Brent rose 7.12% to end the day at $115.62."
                                    Foreground="DarkGray" 
                                    FontFamily="/Fonts/#Poppins" 
                                    FontWeight="Bold" 
                                    FontSize="15"/>
 
-                                <TextBlock Margin="0, 30, 20, 0" 
+                                <TextBlock Margin="0, 10, 20, 0" 
                                    VerticalAlignment="Center" 
                                    HorizontalAlignment="Right" 
                                    Text="March 13, 2022" 
@@ -224,7 +224,7 @@
                         </Border.Effect>
 
                         <!--https://www.investing.com/news/stock-market-news/berkshire-hathaway-stock-price-reaches-500000-2784422-->
-                        <Button Height="250" Style="{StaticResource NewsButtonTheme}">
+                        <Button Name="berkshireButton" Click="berkshireButton_Click" Height="250" Style="{StaticResource NewsButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Margin="10, 10, 0, 0" 
@@ -315,7 +315,7 @@
                         </Border.Effect>
 
                         <!--https://www.investing.com/news/forex-news/us-options-remain-toward-russia-including-full-trade-embargo-cnbc-2784270-->
-                        <Button Height="250" Style="{StaticResource NewsButtonTheme}">
+                        <Button Name="russiaButton" Click="russiaButton_Click" Height="250" Style="{StaticResource NewsButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Margin="10, 10, 0, 0" 
@@ -419,7 +419,7 @@
                         </Border.Effect>
 
                         <!--https://www.marketwatch.com/story/apple-can-withstand-production-disruptions-in-china-analysts-say-11647289600?mod=technology-->
-                        <Button Height="250" Style="{StaticResource NewsButtonTheme}">
+                        <Button Name="marketButton" Click="marketButton_Click" Height="250" Style="{StaticResource NewsButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Margin="10, 10, 0, 0" 
@@ -510,7 +510,7 @@
                         </Border.Effect>
 
                         <!--https://www.fool.com/investing/2022/03/14/why-nvidia-stock-dropped-again-today/-->
-                        <Button Height="250" Style="{StaticResource NewsButtonTheme}">
+                        <Button Name="nvidiaButton" Click="nvidiaButton_Click" Height="250" Style="{StaticResource NewsButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Margin="10, 10, 0, 0" 
@@ -614,7 +614,7 @@
                         </Border.Effect>
 
                         <!--https://finance.yahoo.com/news/12-oil-stocks-goldman-sachs-thinks-has-big-upside-potential-165838737.html-->
-                        <Button Height="250" Style="{StaticResource NewsButtonTheme}">
+                        <Button Name="oilGoldman" Click="oilGoldman_Click" Height="250" Style="{StaticResource NewsButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Margin="10, 10, 0, 0" 
@@ -705,7 +705,7 @@
                         </Border.Effect>
 
                         <!--https://www.cnbc.com/2022/03/14/ford-says-it-will-ramp-up-ev-offering-in-europe.html-->
-                        <Button Height="250" Style="{StaticResource NewsButtonTheme}">
+                        <Button Name="fordButton" Click="fordButton_Click" Height="250" Style="{StaticResource NewsButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <StackPanel Orientation="Horizontal">
                                     <TextBlock Margin="10, 10, 0, 0" 

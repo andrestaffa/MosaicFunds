@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="MosaicFunds.MVVM.View.NewsDisplayView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:wb2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+             xmlns:local="clr-namespace:MosaicFunds.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="1080">
+
+    <DockPanel>
+        <Border Margin="20" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+            <Border.Effect>
+                <DropShadowEffect Direction="275" BlurRadius="20"/>
+            </Border.Effect>
+
+            <wb2:WebView2 Name="webView"/>
+
+        </Border>
+    </DockPanel>
+    
+    
+</UserControl>

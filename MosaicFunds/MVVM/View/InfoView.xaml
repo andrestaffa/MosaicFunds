@@ -25,7 +25,7 @@
                                      FontWeight="Light"
                                      FontSize="12"/>
 
-                            <TextBlock Margin="20, 30, 0, 0" 
+                            <TextBlock x:Name="stockTicker" Margin="20, 30, 0, 0" 
                                    VerticalAlignment="Center" 
                                    HorizontalAlignment="Left" 
                                    Text="AMC" 
@@ -34,7 +34,7 @@
                                    FontWeight="Bold" 
                                    FontSize="20"/>
 
-                            <TextBlock Margin="20, 0, 0, 0"
+                            <TextBlock x:Name="stockCompany" Margin="20, 0, 0, 0"
                                    Text="AMC Theatres" 
                                    Foreground="DarkGray" 
                                    FontFamily="/Fonts/#Poppins" 
@@ -50,7 +50,7 @@
                                    FontFamily="/Fonts/#Poppins" 
                                    FontWeight="Light" 
                                    FontSize="13"/>
-                                <TextBlock Text="$15.62"
+                                <TextBlock x:Name="stockPrice" Text="$15.62"
                                    Margin="110, -20, 0, 0"
                                    Foreground="#4692BA"
                                    FontFamily="/Fonts/#Poppins"
@@ -85,7 +85,7 @@
                                            FontFamily="/Fonts/#Poppins"
                                            FontSize="15"
                                            FontWeight="Heavy"/>
-                                    <TextBlock Text="+4.47"
+                                    <TextBlock x:Name="stockChangeDollar" Text="+4.47"
                                            Margin="22, 10, 0, 0"
                                            HorizontalAlignment="Center"
                                            Foreground="#00FF00"
@@ -101,7 +101,7 @@
                                            FontFamily="/Fonts/#Poppins"
                                            FontSize="15"
                                            FontWeight="Heavy"/>
-                                    <TextBlock Text="+5.89%"
+                                    <TextBlock x:Name="stockChangePercent" Text="+5.89%"
                                            Margin="15, 10, 0, 0"
                                            HorizontalAlignment="Center"
                                            Foreground="#00FF00"
@@ -122,7 +122,7 @@
                                            FontFamily="/Fonts/#Poppins"
                                            FontSize="15"
                                            FontWeight="Heavy"/>
-                                    <TextBlock Text="8,365"
+                                    <TextBlock x:Name="stockShares" Text="8,365"
                                            Margin="40, 10, 0, 0"
                                            HorizontalAlignment="Center"
                                            Foreground="DarkGray"
@@ -139,7 +139,7 @@
                                            FontFamily="/Fonts/#Poppins"
                                            FontSize="15"
                                            FontWeight="Heavy"/>
-                                    <TextBlock Text="$130.66K"
+                                    <TextBlock x:Name="stockValue" Text="$130.66K"
                                            Margin="30, 10, 0, 0"
                                            HorizontalAlignment="Center"
                                            Foreground="DarkGray"
@@ -157,7 +157,7 @@
                                            HorizontalAlignment="Center"
                                            FontWeight="Heavy"/>
 
-                                    <TextBlock Text="+$5,461.32"
+                                    <TextBlock x:Name="stockProfit" Text="+$5,461.32"
                                            Margin="25, 10, 0, 0"
                                            Foreground="#00FF00"
                                            FontFamily="/Fonts/#Poppins"
@@ -522,7 +522,7 @@
             </Border.Effect>
 
             <StackPanel Orientation="Vertical">
-                <TextBlock Margin="5, 15, 0, 0" 
+                <TextBlock x:Name="confirmationTitleLabel" Margin="5, 15, 0, 0" 
                            VerticalAlignment="Center" 
                            HorizontalAlignment="Center" 
                            Text="Confirm Transaction&#10;             (AMC)" 
@@ -640,7 +640,51 @@
             </StackPanel>
             
         </Border>
-       
+
+        <Border x:Name="warningPanel" Width="450" Height="175" BorderBrush="Transparent" BorderThickness="1" CornerRadius="15" Background="#2e274c"
+                Visibility="Hidden">
+            <Border.Effect>
+                <DropShadowEffect Direction="275" BlurRadius="20"/>
+            </Border.Effect>
+
+            <Grid>
+                <TextBlock Margin="20"
+                           VerticalAlignment="Top" 
+                           HorizontalAlignment="Center" 
+                           Text="Warning!" 
+                           Foreground="White" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="20"/>
+                <TextBlock x:Name="warningMessageLabel" Margin="20"
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Center" 
+                           Text="You do not have enough available funds to buy &#10;                      xxxx amount of shares." 
+                           Foreground="DarkGray" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="15"/>
+
+                <Button x:Name="warningOkButton" Click="warningOkButton_Click" Background="#21203b"
+                        Margin="10"
+                        VerticalAlignment="Bottom"
+                        Width="150"
+                        Height="35"
+                        Style="{StaticResource CancelButtonTheme}">
+                    <TextBlock VerticalAlignment="Center" 
+                               HorizontalAlignment="Center" 
+                               Text="OK" 
+                               Foreground="White" 
+                               FontFamily="/Fonts/#Poppins" 
+                               FontWeight="UltraBold" 
+                               FontSize="20"/>
+                </Button>
+
+            </Grid>
+            
+        </Border>
+
+
 
     </Grid>
     

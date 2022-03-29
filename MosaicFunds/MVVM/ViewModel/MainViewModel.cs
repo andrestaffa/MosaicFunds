@@ -28,7 +28,9 @@ namespace MosaicFunds.MVVM.ViewModel
         public TransactionViewModel TransactionViewModel { get; set; }
         public SettingsViewModel SettingsViewModel { get; set; }
 
+        // Other views
         public InfoViewModel InfoViewModel { get; set; }
+        public NewsDisplayViewModel NewsDisplayViewModel { get; set; }
 
         private object currentView;
 
@@ -45,11 +47,12 @@ namespace MosaicFunds.MVVM.ViewModel
             this.InfoViewModel = new InfoViewModel();
             this.TransactionViewModel = new TransactionViewModel();
             this.SettingsViewModel = new SettingsViewModel();
+            this.NewsDisplayViewModel = new NewsDisplayViewModel();
             this.CurrentView = DashboardVM;
-            relayCommanders();
+            RelayCommanders();
         }
 
-        private void relayCommanders() {
+        private void RelayCommanders() {
             DashboardCommand = new RelayCommand(o => { this.CurrentView = this.DashboardVM; });
             DiscoverCommand = new RelayCommand(o => { this.CurrentView = this.DiscoverVM; });
             NewsCommand = new RelayCommand(o => { this.CurrentView = this.NewsViewModel; });

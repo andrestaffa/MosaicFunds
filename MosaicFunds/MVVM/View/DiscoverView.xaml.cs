@@ -30,6 +30,7 @@ namespace MosaicFunds.MVVM.View
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
+            mainViewModel.InfoViewModel.ticker = null;            
             mainViewModel.CurrentView = mainViewModel.InfoViewModel;
 
             mainViewModel.pageBuffer.Add(mainViewModel.DiscoverVM);
