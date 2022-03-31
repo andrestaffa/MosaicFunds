@@ -9,8 +9,6 @@ namespace MosaicFunds.MVVM.ViewModel
     class DashboardViewModel
     {
 
-        public bool addToWatchList = false;
-
         public DashboardViewModel() {
 
         }

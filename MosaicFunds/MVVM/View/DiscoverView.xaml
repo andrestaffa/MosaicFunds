@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MosaicFunds.MVVM.View"
+             xmlns:tickerButton="clr-namespace:MosaicFunds.MVVM.Model"
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="1080">
 
@@ -31,79 +32,79 @@
 
                 <Image Height="450" Width="900" Stretch="Fill" Source="/Images/world_map.png" Margin="0, 40, 0, 0"/>
 
-                <Button Click="Button_Click" Width="50" Height="50" Foreground="Green" Style="{StaticResource GlobalMarketButtonTheme}"
+                <tickerButton:TickerButton x:Name="circleNasdaq" Click="Button_Click" Width="50" Height="50" Foreground="Green" Style="{StaticResource GlobalMarketButtonTheme}"
                         Margin="-410, -625, 0, 0">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="NASDAQ" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center"/>
                         <TextBlock Text="+0.28%" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="-2, 0, 0, 0"/>
                     </StackPanel>
-                </Button>
+                </tickerButton:TickerButton>
 
-                <Button Click="Button_Click" Width="50" Height="50" Foreground="Green" Style="{StaticResource GlobalMarketButtonTheme}"
+                <tickerButton:TickerButton x:Name="circleTSX" Click="Button_Click" Width="50" Height="50" Foreground="Green" Style="{StaticResource GlobalMarketButtonTheme}"
                         Margin="-550, -680, 0, 0">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="TSX" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center"/>
                         <TextBlock Text="+0.34%" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="-2, 0, 0, 0"/>
                     </StackPanel>
-                </Button>
+                </tickerButton:TickerButton>
 
-                <Button Click="Button_Click" Width="50" Height="50" Foreground="Green" Style="{StaticResource GlobalMarketButtonTheme}"
+                <tickerButton:TickerButton x:Name="circleFTSE" Click="Button_Click" Width="50" Height="50" Foreground="Green" Style="{StaticResource GlobalMarketButtonTheme}"
                         Margin="-25, -650, 0, 0">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="FTSE" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center"/>
                         <TextBlock Text="+0.53%" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="-2, 0, 0, 0"/>
                     </StackPanel>
-                </Button>
+                </tickerButton:TickerButton>
 
-                <Button Click="Button_Click" Width="50" Height="50" Foreground="Green" Style="{StaticResource GlobalMarketButtonTheme}"
+                <tickerButton:TickerButton x:Name="circleSP" Click="Button_Click" Width="50" Height="50" Foreground="Green" Style="{StaticResource GlobalMarketButtonTheme}"
                         Margin="-620, -450, 0, 0">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="S&amp;P 500" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center"/>
                         <TextBlock Text="+0.73%" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="-2, 0, 0, 0"/>
                     </StackPanel>
-                </Button>
+                </tickerButton:TickerButton>
 
-                <Button Click="Button_Click" Width="50" Height="50" Foreground="Green" Style="{StaticResource GlobalMarketButtonTheme}"
+                <tickerButton:TickerButton x:Name="circleBSE" Click="Button_Click" Width="50" Height="50" Foreground="Green" Style="{StaticResource GlobalMarketButtonTheme}"
                         Margin="390, -500, 0, 0">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="BSE" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center"/>
                         <TextBlock Text="+1.68%" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="-2, 0, 0, 0"/>
                     </StackPanel>
-                </Button>
+                </tickerButton:TickerButton>
 
-                <Button Click="Button_Click" Width="50" Height="50" Foreground="Green" Style="{StaticResource GlobalMarketButtonTheme}"
+                <tickerButton:TickerButton x:Name="circleNifty" Click="Button_Click" Width="50" Height="50" Foreground="Green" Style="{StaticResource GlobalMarketButtonTheme}"
                         Margin="350, -300, 0, 0">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="Nifty" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center"/>
                         <TextBlock Text="+0.43%" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="-2, 0, 0, 0"/>
                     </StackPanel>
-                </Button>
+                </tickerButton:TickerButton>
 
                 <!--MAKE RED-->
 
-                <Button Click="Button_Click" Width="50" Height="50" Foreground="Red" Style="{StaticResource GlobalMarketButtonRedTheme}"
+                <tickerButton:TickerButton x:Name="circleDJI" Click="Button_Click" Width="50" Height="50" Foreground="Red" Style="{StaticResource GlobalMarketButtonRedTheme}"
                         Margin="-500, -525, 0, 0">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="DJI" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center"/>
                         <TextBlock Text="-0.56%" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="-2, 0, 0, 0"/>
                     </StackPanel>
-                </Button>
+                </tickerButton:TickerButton>
 
-                <Button Click="Button_Click" Width="50" Height="50" Foreground="Red" Style="{StaticResource GlobalMarketButtonRedTheme}"
+                <tickerButton:TickerButton x:Name="circleChina" Click="Button_Click" Width="50" Height="50" Foreground="Red" Style="{StaticResource GlobalMarketButtonRedTheme}"
                         Margin="+525, -630, 0, 0">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="China" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center"/>
                         <TextBlock Text="-3.49%" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="-2, 0, 0, 0"/>
                     </StackPanel>
-                </Button>
+                </tickerButton:TickerButton>
 
-                <Button Click="Button_Click" Width="50" Height="50" Foreground="Red" Style="{StaticResource GlobalMarketButtonRedTheme}"
+                <tickerButton:TickerButton x:Name="circleSSE" Click="Button_Click" Width="50" Height="50" Foreground="Red" Style="{StaticResource GlobalMarketButtonRedTheme}"
                         Margin="600, -500, 0, 0">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Text="SSE" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center"/>
                         <TextBlock Text="-2.60%" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="9" FontWeight="Bold" HorizontalAlignment="Center" Margin="-2, 0, 0, 0"/>
                     </StackPanel>
-                </Button>
+                </tickerButton:TickerButton>
 
 
                 <StackPanel Orientation="Horizontal">
@@ -113,7 +114,7 @@
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <tickerButton:TickerButton x:Name="mainSPX" Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="SPX" 
                                            Foreground="White"
@@ -187,7 +188,7 @@
 
                                 </StackPanel>
                             </StackPanel>
-                        </Button>
+                        </tickerButton:TickerButton>
 
                     </Border>
 
@@ -196,7 +197,7 @@
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <tickerButton:TickerButton x:Name="mainNasdaq" Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="NASDAQ" 
                                            Foreground="White"
@@ -270,7 +271,7 @@
 
                                 </StackPanel>
                             </StackPanel>
-                        </Button>
+                        </tickerButton:TickerButton>
 
                     </Border>
 
@@ -283,7 +284,7 @@
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <tickerButton:TickerButton x:Name="mainDJI" Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="DJI" 
                                            Foreground="White"
@@ -357,7 +358,7 @@
 
                                 </StackPanel>
                             </StackPanel>
-                        </Button>
+                        </tickerButton:TickerButton>
 
                     </Border>
 
@@ -366,7 +367,7 @@
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <tickerButton:TickerButton x:Name="mainTSX" Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="TSX" 
                                            Foreground="White"
@@ -440,7 +441,7 @@
 
                                 </StackPanel>
                             </StackPanel>
-                        </Button>
+                        </tickerButton:TickerButton>
 
                     </Border>
 
@@ -462,7 +463,7 @@
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <tickerButton:TickerButton x:Name="mainSHOP" Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="SHOP" 
                                            Foreground="White"
@@ -536,7 +537,7 @@
 
                                 </StackPanel>
                             </StackPanel>
-                        </Button>
+                        </tickerButton:TickerButton>
 
                     </Border>
 
@@ -545,7 +546,7 @@
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <tickerButton:TickerButton x:Name="mainNINE" Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="NINE" 
                                            Foreground="White"
@@ -619,7 +620,7 @@
 
                                 </StackPanel>
                             </StackPanel>
-                        </Button>
+                        </tickerButton:TickerButton>
 
                     </Border>
 
@@ -632,7 +633,7 @@
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <tickerButton:TickerButton x:Name="mainENSV" Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="ENSV" 
                                            Foreground="White"
@@ -706,7 +707,7 @@
 
                                 </StackPanel>
                             </StackPanel>
-                        </Button>
+                        </tickerButton:TickerButton>
 
                     </Border>
 
@@ -715,7 +716,7 @@
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <tickerButton:TickerButton x:Name="mainLAC" Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="LAC" 
                                            Foreground="White"
@@ -789,7 +790,7 @@
 
                                 </StackPanel>
                             </StackPanel>
-                        </Button>
+                        </tickerButton:TickerButton>
 
                     </Border>
 
@@ -811,7 +812,7 @@
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <tickerButton:TickerButton x:Name="mainPBF" Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="PBF" 
                                            Foreground="White"
@@ -885,7 +886,7 @@
 
                                 </StackPanel>
                             </StackPanel>
-                        </Button>
+                        </tickerButton:TickerButton>
 
                     </Border>
 
@@ -894,7 +895,7 @@
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <tickerButton:TickerButton x:Name="mainCORZ" Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="CORZ" 
                                            Foreground="White"
@@ -968,7 +969,7 @@
 
                                 </StackPanel>
                             </StackPanel>
-                        </Button>
+                        </tickerButton:TickerButton>
 
                     </Border>
 
@@ -981,7 +982,7 @@
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <tickerButton:TickerButton x:Name="mainCSIQ" Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="CSIQ" 
                                            Foreground="White"
@@ -1055,7 +1056,7 @@
 
                                 </StackPanel>
                             </StackPanel>
-                        </Button>
+                        </tickerButton:TickerButton>
 
                     </Border>
 
@@ -1064,7 +1065,7 @@
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <tickerButton:TickerButton x:Name="mainNKLA" Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="NKLA" 
                                            Foreground="White"
@@ -1138,7 +1139,7 @@
 
                                 </StackPanel>
                             </StackPanel>
-                        </Button>
+                        </tickerButton:TickerButton>
 
                     </Border>
 
@@ -1160,7 +1161,7 @@
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <tickerButton:TickerButton x:Name="mainSHOP2" Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="SHOP" 
                                            Foreground="White"
@@ -1234,7 +1235,7 @@
 
                                 </StackPanel>
                             </StackPanel>
-                        </Button>
+                        </tickerButton:TickerButton>
 
                     </Border>
 
@@ -1243,7 +1244,7 @@
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <tickerButton:TickerButton x:Name="mainISRG" Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="ISRG" 
                                            Foreground="White"
@@ -1317,7 +1318,7 @@
 
                                 </StackPanel>
                             </StackPanel>
-                        </Button>
+                        </tickerButton:TickerButton>
 
                     </Border>
 
@@ -1330,7 +1331,7 @@
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <tickerButton:TickerButton x:Name="mainNICMF" Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="NICMF" 
                                            Foreground="White"
@@ -1404,7 +1405,7 @@
 
                                 </StackPanel>
                             </StackPanel>
-                        </Button>
+                        </tickerButton:TickerButton>
 
                     </Border>
 
@@ -1413,7 +1414,7 @@
                             <DropShadowEffect Direction="275" BlurRadius="20"/>
                         </Border.Effect>
 
-                        <Button Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
+                        <tickerButton:TickerButton x:Name="mainBRO" Click="Button_Click" Height="250" Style="{StaticResource DiscoverButtonTheme}">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="BRO" 
                                            Foreground="White"
@@ -1487,7 +1488,7 @@
 
                                 </StackPanel>
                             </StackPanel>
-                        </Button>
+                        </tickerButton:TickerButton>
 
                     </Border>
 

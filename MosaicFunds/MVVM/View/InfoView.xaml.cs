@@ -51,11 +51,11 @@ namespace MosaicFunds.MVVM.View
                 updateChangeLabel(ref this.stockValue);
                 updateChangeLabel(ref this.stockProfit);
 
-                if (this.ticker.Shares == "XX") {
+                if (this.ticker.Shares == "NA") {
                     this.stockProfit.Foreground = Brushes.DarkGray;
                     int x = (int)(517436.43f / float.Parse(this.ticker.Price.Remove(0, 1)));
                     this._slider.Maximum = x;
-                } else if (this.ticker.Shares != "XX") {
+                } else if (this.ticker.Shares != "NA") {
                     this._slider.Maximum = double.Parse(this.ticker.Shares.Replace(",", ""));
                 }
 
@@ -106,7 +106,7 @@ namespace MosaicFunds.MVVM.View
 
         private void sellButton_Click(object sender, RoutedEventArgs e)
         {
-            if (this.ticker.Shares == "XX") {
+            if (this.ticker.Shares == "NA") {
                 this.dimBackground.Visibility = Visibility.Visible;
                 this.warningPanel.Visibility = Visibility.Visible;
                 this.warningMessageLabel.Text = "You do not own any shares of " + this.ticker.Name + " to sell.";
@@ -165,7 +165,7 @@ namespace MosaicFunds.MVVM.View
         {
             TextBox textBox = (sender as TextBox);
             if (e.Key == Key.Return || e.Key == Key.Enter) {
-                if (this.ticker.Shares != "XX") {
+                if (this.ticker.Shares != "NA") {
                     float ownedShares = float.Parse(this.ticker.Shares.Replace(",", ""));
                     float enteredShares = float.Parse(this.sharesTextBox.Text);
                     this._slider.Value = (enteredShares > ownedShares) ? ownedShares : float.Parse(this.sharesTextBox.Text);
@@ -192,10 +192,6 @@ namespace MosaicFunds.MVVM.View
             RadioButton radioButton = (sender as RadioButton);
             radioButton.IsChecked = !watchListChecked;
             watchListChecked = !watchListChecked;
-
-            MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
-            mainViewModel.DashboardVM.addToWatchList = watchListChecked;
-
         }
 
         private void warningOkButton_Click(object sender, RoutedEventArgs e)
