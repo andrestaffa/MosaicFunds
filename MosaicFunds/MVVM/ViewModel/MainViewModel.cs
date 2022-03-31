@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using MosaicFunds.Core;
+using MosaicFunds.MVVM.View;
 
 namespace MosaicFunds.MVVM.ViewModel 
 {
@@ -12,8 +13,11 @@ namespace MosaicFunds.MVVM.ViewModel
     {
 
         // Page buffer
-
         public List<object> pageBuffer = new List<object>();
+
+        // watchlist buffer
+        public List<DashboardWatchListTickerView> watchlistTickers = new List<DashboardWatchListTickerView>();
+
 
         public RelayCommand DashboardCommand { get; set; }
         public RelayCommand DiscoverCommand { get; set; }
