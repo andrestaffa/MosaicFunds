@@ -23,16 +23,17 @@ namespace MosaicFunds.MVVM.View
     /// </summary>
     public partial class InfoView : UserControl
     {
-
-        private static bool watchListChecked = false;
         private Ticker ticker;
 
         public InfoView()
         {
             InitializeComponent();
-            this.watchlistButton.IsChecked = watchListChecked;
-
             MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
+
+
+            this.watchlistButton.IsChecked = false;
+
+            
             if (mainViewModel.InfoViewModel.ticker != null) {
 
                 this.ticker = mainViewModel.InfoViewModel.ticker;
@@ -57,6 +58,13 @@ namespace MosaicFunds.MVVM.View
                     this._slider.Maximum = x;
                 } else if (this.ticker.Shares != "NA") {
                     this._slider.Maximum = double.Parse(this.ticker.Shares.Replace(",", ""));
+                }
+
+                foreach (DashboardWatchListTickerView tickerButton in mainViewModel.watchlistTickers) {
+                    if (tickerButton.Name.Text == this.ticker.Name) {
+                        this.watchlistButton.IsChecked = tickerButton.isWatchListChecked;
+                        break;
+                    }
                 }
 
             }
@@ -189,10 +197,28 @@ namespace MosaicFunds.MVVM.View
 
         private void watchlistButton_Click(object sender, RoutedEventArgs e)
         {
+
             RadioButton radioButton = (sender as RadioButton);
-            radioButton.IsChecked = !watchListChecked;
-            watchListChecked = !watchListChecked;
+            MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
+            foreach (DashboardWatchListTickerView tickerButton in mainViewModel.watchlistTickers) {
+                if (tickerButton.Name.Text == this.ticker.Name) {
+                    this.watchlistButton.IsChecked = false;
+                    tickerButton.isWatchListChecked = false;
+                    mainViewModel.watchlistTickers.Remove(tickerButton);
+                    return;
+                }
+            }
+
+            DashboardWatchListTickerView dashboardWatchListTickerView = new DashboardWatchListTickerView();
+            dashboardWatchListTickerView.isWatchListChecked = true;
+            dashboardWatchListTickerView.Name.Text = this.ticker.Name;
+            dashboardWatchListTickerView.CompanyName.Text = this.ticker.CompanyName;
+            dashboardWatchListTickerView.Price.Text = this.ticker.Price;
+            dashboardWatchListTickerView.ChangePercent.Text = this.ticker.ChangePercent;
+            mainViewModel.watchlistTickers.Add(dashboardWatchListTickerView);
         }
+
+            
 
         private void warningOkButton_Click(object sender, RoutedEventArgs e)
         {

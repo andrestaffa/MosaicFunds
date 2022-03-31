@@ -29,7 +29,7 @@ namespace MosaicFunds.MVVM.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            TickerButton button = (sender as TickerButton);
+            Button button = (sender as Button);
             MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
 
 

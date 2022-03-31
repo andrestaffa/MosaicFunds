@@ -23,22 +23,25 @@ namespace MosaicFunds.MVVM.View
     /// </summary>
     public partial class DashboardView : UserControl
     {
+
         public DashboardView()
         {
             InitializeComponent();
             MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
+            foreach (DashboardWatchListTickerView tickerButton in mainViewModel.watchlistTickers) this.watchlistStackPanel.Children.Insert(0, tickerButton);
+            mainViewModel.watchlistTickers.Clear();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            TickerButton button = (sender as TickerButton);
+            Button button = (sender as Button);
             MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
 
             if (button.Name == "amcButton") {
                mainViewModel.InfoViewModel.ticker = new Ticker("AMC", "AMC Theatres", "$15.62", "+4.47", "+5.89%", "8,365", "130.66k", "+$5,461.32");
             } else if (button.Name == "amcButton2") {
-                mainViewModel.InfoViewModel.ticker = new Ticker("AMC", "AMC Theatres", "$15.62", "+4.47", "+5.89%", "NA", "      NA      ", "      NA      ");
+               mainViewModel.InfoViewModel.ticker = new Ticker("AMC", "AMC Theatres", "$15.62", "+4.47", "+5.89%", "NA", "      NA      ", "      NA      ");
             } else if (button.Name == "appleButton") {
                mainViewModel.InfoViewModel.ticker = new Ticker("AAPL", "Apple Inc.", "$159.30", "-6.12", "-2.37%", "2,812", "449.95k", "-$3,653.32");
             } else if (button.Name == "baytexButton") {

@@ -84,6 +84,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MVVM\View\DashboardWatchListTickerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\DiscoverView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -179,7 +183,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MVVM\Model\Ticker.cs" />
-    <Compile Include="MVVM\Model\TickerButton.cs" />
     <Compile Include="MVVM\ViewModel\DashboardViewModel.cs" />
     <Compile Include="MVVM\ViewModel\DiscoverViewModel.cs" />
     <Compile Include="MVVM\ViewModel\InfoViewModel.cs" />
@@ -190,6 +193,9 @@
     <Compile Include="MVVM\ViewModel\TransactionViewModel.cs" />
     <Compile Include="MVVM\View\DashboardView.xaml.cs">
       <DependentUpon>DashboardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\DashboardWatchListTickerView.xaml.cs">
+      <DependentUpon>DashboardWatchListTickerView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\View\DiscoverView.xaml.cs">
       <DependentUpon>DiscoverView.xaml</DependentUpon>
