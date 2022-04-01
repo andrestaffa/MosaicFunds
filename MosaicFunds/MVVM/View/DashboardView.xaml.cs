@@ -29,7 +29,9 @@ namespace MosaicFunds.MVVM.View
             InitializeComponent();
             MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
             foreach (DashboardWatchListTickerView tickerButton in mainViewModel.watchlistTickers) this.watchlistStackPanel.Children.Insert(0, tickerButton);
+            foreach (DashboardPortfolioTickerView tickerButton in mainViewModel.portfolioTickers) this.portfolioStackPanel.Children.Insert(0, tickerButton);
             mainViewModel.watchlistTickers.Clear();
+            mainViewModel.portfolioTickers.Clear();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

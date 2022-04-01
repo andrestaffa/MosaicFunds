@@ -80,6 +80,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\View\DashboardPortfolioTickerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\DashboardView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -191,6 +195,9 @@
     <Compile Include="MVVM\ViewModel\NewsViewModel.cs" />
     <Compile Include="MVVM\ViewModel\SettingsViewModel.cs" />
     <Compile Include="MVVM\ViewModel\TransactionViewModel.cs" />
+    <Compile Include="MVVM\View\DashboardPortfolioTickerView.xaml.cs">
+      <DependentUpon>DashboardPortfolioTickerView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\View\DashboardView.xaml.cs">
       <DependentUpon>DashboardView.xaml</DependentUpon>
     </Compile>

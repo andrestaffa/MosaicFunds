@@ -80,27 +80,10 @@
                             </Border>
 
                             <ScrollViewer Width="517" Height="140" Margin="0, 0, 0, 0" VerticalScrollBarVisibility="Visible">
-                                <StackPanel Orientation="Vertical">
+                                <StackPanel x:Name="portfolioStackPanel" Orientation="Vertical">
 
                                     <!--ADD TICKERS HERE-->
 
-                                    <Button x:Name="amcButton" Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
-                                        <StackPanel Orientation="Horizontal" Margin="10">
-                                            <StackPanel>
-                                                <TextBlock Text="AMC" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                                <TextBlock Text="AMC Theatres" Foreground="DarkGray" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight"/>
-                                            </StackPanel>
-                                            <TextBlock Text="8,365" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold" Margin="100, 0, 0, 0"/>
-                                            <StackPanel Margin="100, 0, 0, 0">
-                                                <TextBlock Text="$15.62" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                                <TextBlock Text="+5.89%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
-                                            </StackPanel>
-                                            <StackPanel Margin="75, 0, 0, 0">
-                                                <TextBlock Text="+$5,461.32" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
-                                                <TextBlock Text="+8.21%" Foreground="#00ff00" FontFamily="/Fonts/#Poppins" FontSize="10" FontWeight="UltraLight" HorizontalAlignment="Right"/>
-                                            </StackPanel>
-                                        </StackPanel>
-                                    </Button>
                                     <Button x:Name="appleButton" Click="Button_Click" Style="{StaticResource TickerButtonTheme}">
                                         <StackPanel Orientation="Horizontal" Margin="10">
                                             <StackPanel>
