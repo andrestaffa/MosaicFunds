@@ -149,7 +149,7 @@
                                 </StackPanel>
 
                                 <StackPanel Orientation="Vertical">
-                                    <TextBlock Text="P&amp;L"
+                                    <TextBlock x:Name="stockProfit_static" Text="P&amp;L"
                                            Margin="25, 15, 0, 0"
                                            Foreground="White"
                                            FontFamily="/Fonts/#Poppins"
@@ -558,7 +558,7 @@
                            FontFamily="/Fonts/#Poppins" 
                            FontWeight="Bold" 
                            FontSize="15"/>
-                    <TextBlock Margin="0, 25, 30, 0" 
+                    <TextBlock x:Name="confirmPriceLabel" Margin="0, 25, 30, 0" 
                            VerticalAlignment="Center" 
                            HorizontalAlignment="Right" 
                            Text="$15.62" 

@@ -18,6 +18,9 @@ namespace MosaicFunds.MVVM.ViewModel
         // watchlist buffer
         public List<DashboardWatchListTickerView> watchlistTickers = new List<DashboardWatchListTickerView>();
 
+        // portfolio buffer
+        public List<DashboardPortfolioTickerView> portfolioTickers = new List<DashboardPortfolioTickerView>();
+
 
         public RelayCommand DashboardCommand { get; set; }
         public RelayCommand DiscoverCommand { get; set; }

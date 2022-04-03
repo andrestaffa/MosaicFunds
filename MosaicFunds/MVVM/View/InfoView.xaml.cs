@@ -41,6 +41,7 @@ namespace MosaicFunds.MVVM.View
                 this.stockCompany.Text = this.ticker.CompanyName;
                 this.stockPrice.Text = this.ticker.Price;
                 this.priceLabel.Text = this.ticker.Price;
+                this.confirmPriceLabel.Text = this.ticker.Price;
                 this.stockChangeDollar.Text = this.ticker.ChangeDollar;
                 this.stockChangePercent.Text = this.ticker.ChangePercent;
                 this.stockShares.Text = this.ticker.Shares;
@@ -52,6 +53,8 @@ namespace MosaicFunds.MVVM.View
                 updateChangeLabel(ref this.stockValue);
                 updateChangeLabel(ref this.stockProfit);
 
+                Debug.WriteLine(this.stockProfit.Text.Substring(0, 1));
+
                 if (this.ticker.Shares == "NA") {
                     this.stockProfit.Foreground = Brushes.DarkGray;
                     int x = (int)(517436.43f / float.Parse(this.ticker.Price.Remove(0, 1)));
@@ -60,11 +63,15 @@ namespace MosaicFunds.MVVM.View
                     this._slider.Maximum = double.Parse(this.ticker.Shares.Replace(",", ""));
                 }
 
-                foreach (DashboardWatchListTickerView tickerButton in mainViewModel.watchlistTickers) {
-                    if (tickerButton.Name.Text == this.ticker.Name) {
-                        this.watchlistButton.IsChecked = tickerButton.isWatchListChecked;
-                        break;
+                if (this.ticker.Name != "AMC") {
+                    foreach (DashboardWatchListTickerView tickerButton in mainViewModel.watchlistTickers) {
+                        if (tickerButton.Name.Text == this.ticker.Name) {
+                            this.watchlistButton.IsChecked = tickerButton.isWatchListChecked;
+                            break;
+                        }
                     }
+                } else {
+                    this.watchlistButton.IsChecked = true;
                 }
 
             }
@@ -78,6 +85,10 @@ namespace MosaicFunds.MVVM.View
                 textBlock.Foreground = Brushes.Red;
             } else if (firstChar == "+") {
                 textBlock.Foreground = new SolidColorBrush(Color.FromRgb(0, 255, 0));
+            } else if (firstChar == "$") {
+                textBlock.Foreground = Brushes.DarkGray;
+                this.stockProfit_static.Text = "     " + this.stockProfit_static.Text;
+                textBlock.Text = "     " + textBlock.Text;
             }
         }
 
@@ -160,6 +171,20 @@ namespace MosaicFunds.MVVM.View
         {
             this.dimBackground.Visibility = Visibility.Hidden;
             this.confirmationPanel.Visibility = Visibility.Hidden;
+
+            MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
+            DashboardPortfolioTickerView dashboardPortfolioTickerView = new DashboardPortfolioTickerView();
+            dashboardPortfolioTickerView.Name.Text = this.ticker.Name;
+            dashboardPortfolioTickerView.CompanyName.Text = this.ticker.CompanyName;
+            dashboardPortfolioTickerView.Price.Text = this.ticker.Price;
+            dashboardPortfolioTickerView.ChangePercent.Text = this.ticker.ChangePercent;
+            dashboardPortfolioTickerView.Shares.Text = String.Format("{0:n0}", int.Parse(this.sharesTextBox.Text));
+            dashboardPortfolioTickerView.PortChangeDollar.Text = "$0.00";
+            dashboardPortfolioTickerView.portChangePercent.Text = "0.00%";
+            dashboardPortfolioTickerView.PortChangeDollar.Foreground = Brushes.DarkGray;
+            dashboardPortfolioTickerView.portChangePercent.Foreground = Brushes.DarkGray;
+            mainViewModel.portfolioTickers.Add(dashboardPortfolioTickerView);
+
         }
 
         private void _slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
