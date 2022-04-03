@@ -24,9 +24,12 @@ namespace MosaicFunds.MVVM.View
     public partial class DashboardView : UserControl
     {
 
+        private Chart chart;
+
         public DashboardView()
         {
             InitializeComponent();
+            this.chart = new Chart(this.portfolioChart);
             MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
             foreach (DashboardWatchListTickerView tickerButton in mainViewModel.watchlistTickers) this.watchlistStackPanel.Children.Insert(0, tickerButton);
             foreach (DashboardPortfolioTickerView tickerButton in mainViewModel.portfolioTickers) this.portfolioStackPanel.Children.Insert(0, tickerButton);
@@ -64,6 +67,23 @@ namespace MosaicFunds.MVVM.View
             MainWindow main = (MainWindow)Application.Current.MainWindow;
             if (!main.backButton.IsVisible)
                 main.backButton.Visibility = Visibility.Visible;
+
+        }
+
+        private void IntervalButtonClicked(object sender, RoutedEventArgs e) {
+
+            RadioButton radioButton = (sender as RadioButton);
+            if ((string)radioButton.Content == "1D") {
+                this.chart.generateRandomChart();
+            } else if ((string)radioButton.Content == "1W") {
+                this.chart.generateRandomChart();
+            } else if ((string)radioButton.Content == "1M") {
+                this.chart.generateRandomChart();
+            } else if ((string)radioButton.Content == "1Y") {
+                this.chart.generateRandomChart();
+            } else if ((string)radioButton.Content == "5Y") {
+                this.chart.generateRandomChart();
+            }
 
         }
 
