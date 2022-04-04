@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              xmlns:local="clr-namespace:MosaicFunds.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="1080">
@@ -178,23 +179,19 @@
 
                         <StackPanel Orientation="Vertical">
 
-                            <Button Margin="20" Foreground="Transparent" HorizontalAlignment="Left" VerticalAlignment="Center" Width="35" Height="35" Style="{StaticResource InfoButtonTheme}">
-                                <Image Source="/Images/info_button.png"></Image>
-                            </Button>
-
-                            <Image Height="325" Width="475" Source="/Images/line_chart.png" Margin="35,-30,35,65" RenderTransformOrigin=".5, .5"/>
-
+                            <lvc:CartesianChart x:Name="stockChart" Height="375" Margin="20"/>
+                            
                             <StackPanel Orientation="Horizontal">
-                                <RadioButton Content="1D" FontFamily="/Fonts/#Poppins" FontSize="13" FontWeight="Bold" Style="{StaticResource DataIntervalButtonTheme}" 
-                                     Margin="75, -50, 0, 50" IsChecked="True"/>
-                                <RadioButton Content="1W" FontFamily="/Fonts/#Poppins" FontSize="13" FontWeight="Bold" Style="{StaticResource DataIntervalButtonTheme}" 
-                                     Margin="75, -50, 0, 50"/>
-                                <RadioButton Content="1M" FontFamily="/Fonts/#Poppins" FontSize="13" FontWeight="Bold" Style="{StaticResource DataIntervalButtonTheme}" 
-                                     Margin="75, -50, 0, 50"/>
-                                <RadioButton Content="1Y" FontFamily="/Fonts/#Poppins" FontSize="13" FontWeight="Bold" Style="{StaticResource DataIntervalButtonTheme}" 
-                                     Margin="75, -50, 0, 50"/>
-                                <RadioButton Content="5Y" FontFamily="/Fonts/#Poppins" FontSize="13" FontWeight="Bold" Style="{StaticResource DataIntervalButtonTheme}" 
-                                     Margin="75, -50, 0, 50"/>
+                                <RadioButton Click="IntervalButtonClicked" Content="1D" FontFamily="/Fonts/#Poppins" FontSize="13" FontWeight="Bold" Style="{StaticResource DataIntervalButtonTheme}" 
+                                     Margin="75, 0, 0, 0" IsChecked="True"/>
+                                <RadioButton Click="IntervalButtonClicked" Content="1W" FontFamily="/Fonts/#Poppins" FontSize="13" FontWeight="Bold" Style="{StaticResource DataIntervalButtonTheme}" 
+                                     Margin="75, 0, 0, 0"/>
+                                <RadioButton Click="IntervalButtonClicked" Content="1M" FontFamily="/Fonts/#Poppins" FontSize="13" FontWeight="Bold" Style="{StaticResource DataIntervalButtonTheme}" 
+                                     Margin="75, 0, 0, 0"/>
+                                <RadioButton Click="IntervalButtonClicked" Content="1Y" FontFamily="/Fonts/#Poppins" FontSize="13" FontWeight="Bold" Style="{StaticResource DataIntervalButtonTheme}" 
+                                     Margin="75, 0, 0, 0"/>
+                                <RadioButton Click="IntervalButtonClicked" Content="5Y" FontFamily="/Fonts/#Poppins" FontSize="13" FontWeight="Bold" Style="{StaticResource DataIntervalButtonTheme}" 
+                                     Margin="75, 0, 0, 0"/>
                             </StackPanel>
 
                         </StackPanel>

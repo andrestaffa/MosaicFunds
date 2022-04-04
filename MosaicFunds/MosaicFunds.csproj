@@ -192,7 +192,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MVVM\Model\Chart.cs" />
+    <Compile Include="MVVM\Model\ALineChart.cs" />
+    <Compile Include="MVVM\Model\APieChart.cs" />
     <Compile Include="MVVM\Model\Ticker.cs" />
     <Compile Include="MVVM\ViewModel\DashboardViewModel.cs" />
     <Compile Include="MVVM\ViewModel\DiscoverViewModel.cs" />

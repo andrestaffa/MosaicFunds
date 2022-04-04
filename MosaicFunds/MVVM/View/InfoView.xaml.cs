@@ -24,18 +24,17 @@ namespace MosaicFunds.MVVM.View
     public partial class InfoView : UserControl
     {
         private Ticker ticker;
+        private ALineChart lineChart;
 
         public InfoView()
         {
             InitializeComponent();
+            this.lineChart = new ALineChart(this.stockChart, 15.62, 15.62 - 4.47, 0.1, 15);
+
             MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
-
-
             this.watchlistButton.IsChecked = false;
-
             
             if (mainViewModel.InfoViewModel.ticker != null) {
-
                 this.ticker = mainViewModel.InfoViewModel.ticker;
                 this.stockTicker.Text = this.ticker.Name;
                 this.stockCompany.Text = this.ticker.CompanyName;
@@ -250,5 +249,23 @@ namespace MosaicFunds.MVVM.View
             this.dimBackground.Visibility = Visibility.Hidden;
             this.warningPanel.Visibility = Visibility.Hidden;
         }
+
+        private void IntervalButtonClicked(object sender, RoutedEventArgs e) {
+
+            RadioButton radioButton = (sender as RadioButton);
+            if ((string)radioButton.Content == "1D") {
+                this.lineChart.generateRandomChart();
+            } else if ((string)radioButton.Content == "1W") {
+                this.lineChart.generateRandomChart();
+            } else if ((string)radioButton.Content == "1M") {
+                this.lineChart.generateRandomChart();
+            } else if ((string)radioButton.Content == "1Y") {
+                this.lineChart.generateRandomChart();
+            } else if ((string)radioButton.Content == "5Y") {
+                this.lineChart.generateRandomChart();
+            }
+
+        }
+
     }
 }

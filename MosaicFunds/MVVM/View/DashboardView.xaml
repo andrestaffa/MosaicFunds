@@ -58,6 +58,47 @@
                     </StackPanel>
                 </Border>
 
+                <Border Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c" Margin="20">
+                    <Border.Effect>
+                        <DropShadowEffect Direction="275" BlurRadius="20"/>
+                    </Border.Effect>
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="45, 20, 20, 20" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Left" 
+                               Text="Portfolio Diversity" Foreground="White" 
+                               FontFamily="/Fonts/#Poppins"
+                               FontWeight="Bold" FontSize="25"/>
+                            <TextBlock Margin="100, 20, 20, 20" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Left" 
+                               Text="Asset Allocation" Foreground="White" 
+                               FontFamily="/Fonts/#Poppins"
+                               FontWeight="Bold" FontSize="25"/>
+                            <TextBlock Margin="125, 20, 20, 20" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Left" 
+                               Text="Risk Measure" Foreground="White" 
+                               FontFamily="/Fonts/#Poppins"
+                               FontWeight="Bold" FontSize="25"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Height="150">
+                            <lvc:PieChart x:Name="sectorPieChart" Width="300" InnerRadius="20" Hoverable="True"/>
+                            <lvc:PieChart x:Name="assetPirChart" Margin="40, 0, 0, 0" Width="300" InnerRadius="20" Hoverable="True"/>
+                            <lvc:Gauge Width="200" Foreground="White" Margin="85, -15, 0, 0" From="0" To="100" Value="75">
+                                <lvc:Gauge.GaugeActiveFill>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="#00ff00" Offset="0.0"/>
+                                        <GradientStop Color="Orange" Offset="0.5"/>
+                                        <GradientStop Color="Red" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </lvc:Gauge.GaugeActiveFill>
+                            </lvc:Gauge>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
                 <DockPanel Height="280">
                     <Border Margin="20" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
                         <Border.Effect>
@@ -148,7 +189,7 @@
                             <Border Width="538" Height="35" Background="Transparent">
                                 <DockPanel>
                                     <StackPanel Orientation="Horizontal">
-                                        <Label Content="All" HorizontalAlignment="Left" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="20, 0, 0, 0"/>
+                                        <Label Content="All" HorizontalAlignment="Left" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="5, 0, 0, 0"/>
                                         <Label Content="Last Price" HorizontalAlignment="Left"  Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="130, 0, 0, 0"/>
                                         <Label Content="Chart" HorizontalAlignment="Left"  Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="85, 0, 0, 0"/>
                                     </StackPanel>

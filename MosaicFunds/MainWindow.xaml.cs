@@ -24,12 +24,7 @@ namespace MosaicFunds
 
         public MainWindow() {
             InitializeComponent();
-        }
-
-
-        protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e) {
-            base.OnMouseLeftButtonDown(e);
-            this.DragMove();
+            this.sidePanel.MouseDown += (s, e) => this.DragMove();
         }
 
         private void backButton_Click(object sender, RoutedEventArgs e)

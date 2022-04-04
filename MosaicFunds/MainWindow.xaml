@@ -34,7 +34,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Border Grid.Row="1" CornerRadius="20">
+            <Border x:Name="sidePanel" Grid.Row="1" CornerRadius="20">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
                         <GradientStop Color="#343155" Offset="0"/>
@@ -120,8 +120,17 @@
                     FontSize="14"
                     FontFamily="/Fonts/#Poppins"
                     Visibility="Hidden"
-                                        
                     Style="{StaticResource SideMenuButtonTheme}"/>
+
+                    <RadioButton
+                    Content="Exit"
+                    Height="50"
+                    Margin="0,150,0,0"    
+                    Foreground="White"
+                    FontSize="14"
+                    FontFamily="/Fonts/#Poppins"
+                    Style="{StaticResource SideMenuButtonTheme}"
+                    Command="{Binding ExitCommand}"/>
 
                 </StackPanel>
             </Border>
