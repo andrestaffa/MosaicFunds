@@ -114,6 +114,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MVVM\View\SettingsInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\SettingsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -194,6 +198,7 @@
   <ItemGroup>
     <Compile Include="MVVM\Model\ALineChart.cs" />
     <Compile Include="MVVM\Model\APieChart.cs" />
+    <Compile Include="MVVM\Model\SettingsModel.cs" />
     <Compile Include="MVVM\Model\Ticker.cs" />
     <Compile Include="MVVM\ViewModel\DashboardViewModel.cs" />
     <Compile Include="MVVM\ViewModel\DiscoverViewModel.cs" />
@@ -201,6 +206,7 @@
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
     <Compile Include="MVVM\ViewModel\NewsDisplayViewModel.cs" />
     <Compile Include="MVVM\ViewModel\NewsViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\SettingsInfoViewModel.cs" />
     <Compile Include="MVVM\ViewModel\SettingsViewModel.cs" />
     <Compile Include="MVVM\ViewModel\TransactionViewModel.cs" />
     <Compile Include="MVVM\View\DashboardPortfolioTickerView.xaml.cs">
@@ -223,6 +229,9 @@
     </Compile>
     <Compile Include="MVVM\View\NewsView.xaml.cs">
       <DependentUpon>NewsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\SettingsInfoView.xaml.cs">
+      <DependentUpon>SettingsInfoView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\View\SettingsView.xaml.cs">
       <DependentUpon>SettingsView.xaml</DependentUpon>

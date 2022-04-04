@@ -245,7 +245,8 @@
                                      Padding="0, 2, 0, 0"    
                                      Foreground="#4692BA"
                                      BorderThickness="0"
-                                     Background="#21203b"    
+                                     Background="#21203b"
+                                     PreviewTextInput="NumberValidationTextBox"   
                                      >
                                     <TextBox.Resources>
                                         <Style TargetType="{x:Type Border}">
