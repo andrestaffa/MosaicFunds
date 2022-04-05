@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,18 +25,22 @@ namespace MosaicFunds.MVVM.View
     public partial class InfoView : UserControl
     {
         private Ticker ticker;
+        private ALineChart lineChart;
 
         public InfoView()
         {
             InitializeComponent();
+
+            this.loadingSpinner.Foreground = new SolidColorBrush(Color.FromRgb(173, 216, 230));
+
+            this.ShowLoadingSpinner();
+            this.lineChart = new ALineChart(this.stockChart, 15.62, 15.62 - 4.47, 0.1, 15);
+            _ = HideLoadingSpinner();
+            
             MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
-
-
             this.watchlistButton.IsChecked = false;
-
             
             if (mainViewModel.InfoViewModel.ticker != null) {
-
                 this.ticker = mainViewModel.InfoViewModel.ticker;
                 this.stockTicker.Text = this.ticker.Name;
                 this.stockCompany.Text = this.ticker.CompanyName;
@@ -250,5 +255,49 @@ namespace MosaicFunds.MVVM.View
             this.dimBackground.Visibility = Visibility.Hidden;
             this.warningPanel.Visibility = Visibility.Hidden;
         }
+
+        private void IntervalButtonClicked(object sender, RoutedEventArgs e) {
+
+            RadioButton radioButton = (sender as RadioButton);
+            if ((string)radioButton.Content == "1D") {
+                this.ShowLoadingSpinner();
+                this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
+            } else if ((string)radioButton.Content == "1W") {
+                this.ShowLoadingSpinner();
+                this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
+            } else if ((string)radioButton.Content == "1M") {
+                this.ShowLoadingSpinner();
+                this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
+            } else if ((string)radioButton.Content == "1Y") {
+                this.ShowLoadingSpinner();
+                this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
+            } else if ((string)radioButton.Content == "5Y") {
+                this.ShowLoadingSpinner();
+                this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
+            }
+
+        }
+
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e) {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void ShowLoadingSpinner() {
+            this.loadingSpinner.Visibility = Visibility.Visible;
+            this.loadingSpinner.Spin = true;
+        }
+
+        private async Task HideLoadingSpinner() {
+            await Task.Delay(1000);
+            this.loadingSpinner.Visibility = Visibility.Hidden;
+            this.loadingSpinner.Spin = false;
+        }
+
     }
 }

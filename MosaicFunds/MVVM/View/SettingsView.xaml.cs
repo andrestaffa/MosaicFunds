@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MosaicFunds.MVVM.Model;
+using MosaicFunds.MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,5 +26,28 @@ namespace MosaicFunds.MVVM.View
         {
             InitializeComponent();
         }
+
+        private void SettingsButtonClicked(object sender, RoutedEventArgs e) {
+
+            Button button = (sender as Button);
+            MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
+
+            if (button == this.personalInfoButton) {
+                mainViewModel.SettingsInfoViewModel.settingsModel = new SettingsModel("Personal Information");
+            } else if (button == this.bankingInfoButton) {
+                mainViewModel.SettingsInfoViewModel.settingsModel = new SettingsModel("Banking and Finance");
+            } else if (button == this.securityButton) {
+                mainViewModel.SettingsInfoViewModel.settingsModel = new SettingsModel("Security");
+            } else if (button == this.personalizationButton) {
+                mainViewModel.SettingsInfoViewModel.settingsModel = new SettingsModel("Personalization");
+            }
+
+            mainViewModel.CurrentView = mainViewModel.SettingsInfoViewModel;
+            mainViewModel.pageBuffer.Add(mainViewModel.SettingsViewModel);
+            MainWindow main = (MainWindow)Application.Current.MainWindow;
+            if (!main.backButton.IsVisible) main.backButton.Visibility = Visibility.Visible;
+
+        }
+
     }
 }

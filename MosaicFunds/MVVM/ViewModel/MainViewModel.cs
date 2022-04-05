@@ -27,6 +27,7 @@ namespace MosaicFunds.MVVM.ViewModel
         public RelayCommand NewsCommand { get; set; }
         public RelayCommand TransactionsCommand { get; set; }
         public RelayCommand SettingsCommand { get; set; }
+        public RelayCommand ExitCommand { get; set; }
 
 
         public DashboardViewModel DashboardVM { get; set; }
@@ -38,6 +39,7 @@ namespace MosaicFunds.MVVM.ViewModel
         // Other views
         public InfoViewModel InfoViewModel { get; set; }
         public NewsDisplayViewModel NewsDisplayViewModel { get; set; }
+        public SettingsInfoViewModel SettingsInfoViewModel { get; set; }
 
         private object currentView;
 
@@ -54,6 +56,7 @@ namespace MosaicFunds.MVVM.ViewModel
             this.InfoViewModel = new InfoViewModel();
             this.TransactionViewModel = new TransactionViewModel();
             this.SettingsViewModel = new SettingsViewModel();
+            this.SettingsInfoViewModel = new SettingsInfoViewModel();
             this.NewsDisplayViewModel = new NewsDisplayViewModel();
             this.CurrentView = DashboardVM;
             RelayCommanders();
@@ -65,6 +68,7 @@ namespace MosaicFunds.MVVM.ViewModel
             NewsCommand = new RelayCommand(o => { this.CurrentView = this.NewsViewModel; });
             TransactionsCommand = new RelayCommand(o => { this.CurrentView = this.TransactionViewModel; });
             SettingsCommand = new RelayCommand(o => { this.CurrentView = this.SettingsViewModel; });
+            ExitCommand = new RelayCommand(o => { System.Windows.Application.Current.Shutdown(); });
         }
 
 

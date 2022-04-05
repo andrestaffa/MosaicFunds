@@ -54,6 +54,10 @@
                 <view:SettingsView/>
             </DataTemplate>
 
+            <DataTemplate DataType="{x:Type viewModel:SettingsInfoViewModel}">
+                <view:SettingsInfoView/>
+            </DataTemplate>
+
             <DataTemplate DataType="{x:Type viewModel:NewsDisplayViewModel}">
                 <view:NewsDisplayView/>
             </DataTemplate>

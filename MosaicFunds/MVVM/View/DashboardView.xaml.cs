@@ -16,6 +16,10 @@ using System.Windows.Shapes;
 using MosaicFunds.MVVM.Model;
 using MosaicFunds.MVVM.ViewModel;
 
+using LiveCharts;
+using LiveCharts.Wpf;
+using System.Threading;
+
 namespace MosaicFunds.MVVM.View
 {
     /// <summary>
@@ -24,12 +28,32 @@ namespace MosaicFunds.MVVM.View
     public partial class DashboardView : UserControl
     {
 
-        private Chart chart;
+        private ALineChart lineChart;
 
         public DashboardView()
         {
             InitializeComponent();
-            this.chart = new Chart(this.portfolioChart);
+
+            this.loadingSpinner.Foreground = new SolidColorBrush(Color.FromRgb(173, 216, 230));
+
+            this.ShowLoadingSpinner();
+            this.lineChart = new ALineChart(this.portfolioChart, 517436.43, 500000.0, 500);
+            _ = HideLoadingSpinner();
+
+            List<Tuple<string, int>> sectorSections = new List<Tuple<string, int>>();
+            sectorSections.Add(new Tuple<string, int>("Energy", 33));
+            sectorSections.Add(new Tuple<string, int>("Entertainment", 20));
+            sectorSections.Add(new Tuple<string, int>("Technology", 20));
+            sectorSections.Add(new Tuple<string, int>("Medical", 17));
+            new APieChart(this.sectorPieChart, sectorSections);
+
+            List<Tuple<string, int>> assetSections = new List<Tuple<string, int>>();
+            assetSections.Add(new Tuple<string, int>("TFSA", 30));
+            assetSections.Add(new Tuple<string, int>("CAD Cash", 10));
+            assetSections.Add(new Tuple<string, int>("RRSP", 10));
+            assetSections.Add(new Tuple<string, int>("USD Cash", 50));
+            new APieChart(this.assetPirChart, assetSections);
+
             MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
             foreach (DashboardWatchListTickerView tickerButton in mainViewModel.watchlistTickers) this.watchlistStackPanel.Children.Insert(0, tickerButton);
             foreach (DashboardPortfolioTickerView tickerButton in mainViewModel.portfolioTickers) this.portfolioStackPanel.Children.Insert(0, tickerButton);
@@ -74,17 +98,38 @@ namespace MosaicFunds.MVVM.View
 
             RadioButton radioButton = (sender as RadioButton);
             if ((string)radioButton.Content == "1D") {
-                this.chart.generateRandomChart();
+                this.ShowLoadingSpinner();
+                this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
             } else if ((string)radioButton.Content == "1W") {
-                this.chart.generateRandomChart();
+                this.ShowLoadingSpinner();
+                this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
             } else if ((string)radioButton.Content == "1M") {
-                this.chart.generateRandomChart();
+                this.ShowLoadingSpinner();
+                this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
             } else if ((string)radioButton.Content == "1Y") {
-                this.chart.generateRandomChart();
+                this.ShowLoadingSpinner();
+                this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
             } else if ((string)radioButton.Content == "5Y") {
-                this.chart.generateRandomChart();
+                this.ShowLoadingSpinner();
+                this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
             }
 
+        }
+
+        private void ShowLoadingSpinner() {
+            this.loadingSpinner.Visibility = Visibility.Visible;
+            this.loadingSpinner.Spin = true;
+        }
+
+        private async Task HideLoadingSpinner() {
+            await Task.Delay(1000);
+            this.loadingSpinner.Visibility = Visibility.Hidden;
+            this.loadingSpinner.Spin = false;
         }
 
     }

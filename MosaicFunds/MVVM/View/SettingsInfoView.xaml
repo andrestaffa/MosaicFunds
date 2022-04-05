@@ -1,0 +1,89 @@
+﻿<UserControl x:Class="MosaicFunds.MVVM.View.SettingsInfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MosaicFunds.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="1080">
+    <Grid>
+
+        <TextBlock x:Name="titleLabel" Grid.Column="1" Margin="0, -575, 0, 0" 
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" 
+                   Text="Personal Information" Foreground="White" 
+                   FontFamily="/Fonts/#Poppins"
+                   FontWeight="Bold" FontSize="30"/>
+        <Border Grid.Column="1" Height="400" Margin="50, 0, 40, 0" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c">
+            <Border.Effect>
+                <DropShadowEffect Direction="275" BlurRadius="20"/>
+            </Border.Effect>
+
+            <StackPanel Margin="50" Orientation="Vertical">
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Grid.Column="1" Margin="0, 0, 0, 0" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Center" 
+                               Text="Name" Foreground="White" 
+                               FontFamily="/Fonts/#Poppins"
+                               FontWeight="Bold" FontSize="25"/>
+                    <TextBlock Grid.Column="1" Margin="700, 0, 0, 0" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Right" 
+                               Text="Andre" Foreground="DarkGray" 
+                               FontFamily="/Fonts/#Poppins"
+                               FontWeight="Bold" FontSize="25"/>
+                </StackPanel>
+
+                <StackPanel Margin="0. 40, 0, 0" Orientation="Horizontal">
+                    <TextBlock Grid.Column="1" Margin="0, 0, 0, 0" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Center" 
+                               Text="Last Name" Foreground="White" 
+                               FontFamily="/Fonts/#Poppins"
+                               FontWeight="Bold" FontSize="25"/>
+                    <TextBlock Grid.Column="1" Margin="642, 0, 0, 0" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Right" 
+                               Text="Staffa" Foreground="DarkGray" 
+                               FontFamily="/Fonts/#Poppins"
+                               FontWeight="Bold" FontSize="25"/>
+                </StackPanel>
+
+                <StackPanel Margin="0. 40, 0, 0" Orientation="Horizontal">
+                    <TextBlock Grid.Column="1" Margin="0, 0, 0, 0" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Center" 
+                               Text="Email Address" Foreground="White" 
+                               FontFamily="/Fonts/#Poppins"
+                               FontWeight="Bold" FontSize="25"/>
+                    <TextBlock Grid.Column="1" Margin="342, 0, 0, 0" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Right" 
+                               Text="andre.staffa@ucalgary.ca" Foreground="DarkGray" 
+                               FontFamily="/Fonts/#Poppins"
+                               FontWeight="Bold" FontSize="25"/>
+                </StackPanel>
+                <StackPanel Margin="0. 40, 0, 0" Orientation="Horizontal">
+                    <TextBlock Grid.Column="1" Margin="0, 0, 0, 0" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Center" 
+                               Text="Country" Foreground="White" 
+                               FontFamily="/Fonts/#Poppins"
+                               FontWeight="Bold" FontSize="25"/>
+                    <TextBlock Grid.Column="1" Margin="652, 0, 0, 0" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Right" 
+                               Text="Canada" Foreground="DarkGray" 
+                               FontFamily="/Fonts/#Poppins"
+                               FontWeight="Bold" FontSize="25"/>
+                </StackPanel>
+
+            </StackPanel>
+            
+        </Border>
+
+
+    </Grid>
+</UserControl>

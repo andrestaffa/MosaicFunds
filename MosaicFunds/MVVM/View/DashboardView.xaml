@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
              xmlns:local="clr-namespace:MosaicFunds.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="1080">
@@ -35,7 +36,9 @@
                                FontWeight="Bold" FontSize="18"/>
                         </StackPanel>
 
-                        <lvc:CartesianChart x:Name="portfolioChart" Height="350" Margin="20"/>
+                        <fa:ImageAwesome x:Name="loadingSpinner" Icon="CircleOutlineNotch" Spin="False" Visibility="Hidden" Height="30" Width="30" 
+                                             Margin="0, 200, 0, -200"/>
+                        <lvc:CartesianChart x:Name="portfolioChart" Height="350" Margin="20"></lvc:CartesianChart>
 
                         <StackPanel Margin="0, 35, 0, 0" Orientation="Horizontal">
 
@@ -55,6 +58,47 @@
 
                         </StackPanel>
 
+                    </StackPanel>
+                </Border>
+
+                <Border Height="250" BorderBrush="Transparent" BorderThickness="1" CornerRadius="10" Background="#2e274c" Margin="20">
+                    <Border.Effect>
+                        <DropShadowEffect Direction="275" BlurRadius="20"/>
+                    </Border.Effect>
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="45, 20, 20, 20" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Left" 
+                               Text="Portfolio Diversity" Foreground="White" 
+                               FontFamily="/Fonts/#Poppins"
+                               FontWeight="Bold" FontSize="25"/>
+                            <TextBlock Margin="100, 20, 20, 20" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Left" 
+                               Text="Asset Allocation" Foreground="White" 
+                               FontFamily="/Fonts/#Poppins"
+                               FontWeight="Bold" FontSize="25"/>
+                            <TextBlock Margin="125, 20, 20, 20" 
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Left" 
+                               Text="Risk Measure" Foreground="White" 
+                               FontFamily="/Fonts/#Poppins"
+                               FontWeight="Bold" FontSize="25"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Height="150">
+                            <lvc:PieChart x:Name="sectorPieChart" Width="300" InnerRadius="20" Hoverable="True"/>
+                            <lvc:PieChart x:Name="assetPirChart" Margin="40, 0, 0, 0" Width="300" InnerRadius="20" Hoverable="True"/>
+                            <lvc:Gauge Width="200" Foreground="White" Margin="85, -15, 0, 0" From="0" To="100" Value="75">
+                                <lvc:Gauge.GaugeActiveFill>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="#00ff00" Offset="0.0"/>
+                                        <GradientStop Color="Orange" Offset="0.5"/>
+                                        <GradientStop Color="Red" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </lvc:Gauge.GaugeActiveFill>
+                            </lvc:Gauge>
+                        </StackPanel>
                     </StackPanel>
                 </Border>
 
@@ -148,7 +192,7 @@
                             <Border Width="538" Height="35" Background="Transparent">
                                 <DockPanel>
                                     <StackPanel Orientation="Horizontal">
-                                        <Label Content="All" HorizontalAlignment="Left" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="20, 0, 0, 0"/>
+                                        <Label Content="All" HorizontalAlignment="Left" Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="5, 0, 0, 0"/>
                                         <Label Content="Last Price" HorizontalAlignment="Left"  Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="130, 0, 0, 0"/>
                                         <Label Content="Chart" HorizontalAlignment="Left"  Foreground="White" FontFamily="/Fonts/#Poppins" FontSize="15" Margin="85, 0, 0, 0"/>
                                     </StackPanel>

@@ -37,6 +37,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.WPF, Version=4.7.0.37774, Culture=neutral, PublicKeyToken=0758b07a11a4f466, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.WPF.4.7.0.9\lib\net40\FontAwesome.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
     </Reference>
@@ -111,6 +114,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MVVM\View\NewsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\SettingsInfoView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -192,7 +199,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MVVM\Model\Chart.cs" />
+    <Compile Include="MVVM\Model\ALineChart.cs" />
+    <Compile Include="MVVM\Model\APieChart.cs" />
+    <Compile Include="MVVM\Model\SettingsModel.cs" />
     <Compile Include="MVVM\Model\Ticker.cs" />
     <Compile Include="MVVM\ViewModel\DashboardViewModel.cs" />
     <Compile Include="MVVM\ViewModel\DiscoverViewModel.cs" />
@@ -200,6 +209,7 @@
     <Compile Include="MVVM\ViewModel\MainViewModel.cs" />
     <Compile Include="MVVM\ViewModel\NewsDisplayViewModel.cs" />
     <Compile Include="MVVM\ViewModel\NewsViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\SettingsInfoViewModel.cs" />
     <Compile Include="MVVM\ViewModel\SettingsViewModel.cs" />
     <Compile Include="MVVM\ViewModel\TransactionViewModel.cs" />
     <Compile Include="MVVM\View\DashboardPortfolioTickerView.xaml.cs">
@@ -222,6 +232,9 @@
     </Compile>
     <Compile Include="MVVM\View\NewsView.xaml.cs">
       <DependentUpon>NewsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\SettingsInfoView.xaml.cs">
+      <DependentUpon>SettingsInfoView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\View\SettingsView.xaml.cs">
       <DependentUpon>SettingsView.xaml</DependentUpon>
