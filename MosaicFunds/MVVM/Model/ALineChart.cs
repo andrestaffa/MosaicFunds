@@ -18,6 +18,8 @@ namespace MosaicFunds.MVVM.Model {
         private double minValue;
         private double offset;
 
+        
+
         public ALineChart(CartesianChart cartesianChart, double maxValue, double minValue, double offset, int numberOfPoints = 25) {
             this.cartesianChart = cartesianChart;
             this.numberOfPoints = numberOfPoints;
@@ -36,6 +38,8 @@ namespace MosaicFunds.MVVM.Model {
             lineSeries.LabelPoint = point => "$" + String.Format("{0:n}", point.Y);
             series.Add(lineSeries);
             this.cartesianChart.Series = series;
+
+            this.cartesianChart.AnimationsSpeed = TimeSpan.FromSeconds(1);
 
             this.cartesianChart.AxisX.Add(new Axis());
             this.cartesianChart.AxisY.Add(new Axis());

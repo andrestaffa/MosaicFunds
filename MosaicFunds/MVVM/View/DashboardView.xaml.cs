@@ -18,6 +18,7 @@ using MosaicFunds.MVVM.ViewModel;
 
 using LiveCharts;
 using LiveCharts.Wpf;
+using System.Threading;
 
 namespace MosaicFunds.MVVM.View
 {
@@ -32,7 +33,12 @@ namespace MosaicFunds.MVVM.View
         public DashboardView()
         {
             InitializeComponent();
+
+            this.loadingSpinner.Foreground = new SolidColorBrush(Color.FromRgb(173, 216, 230));
+
+            this.ShowLoadingSpinner();
             this.lineChart = new ALineChart(this.portfolioChart, 517436.43, 500000.0, 500);
+            _ = HideLoadingSpinner();
 
             List<Tuple<string, int>> sectorSections = new List<Tuple<string, int>>();
             sectorSections.Add(new Tuple<string, int>("Energy", 33));
@@ -92,17 +98,38 @@ namespace MosaicFunds.MVVM.View
 
             RadioButton radioButton = (sender as RadioButton);
             if ((string)radioButton.Content == "1D") {
+                this.ShowLoadingSpinner();
                 this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
             } else if ((string)radioButton.Content == "1W") {
+                this.ShowLoadingSpinner();
                 this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
             } else if ((string)radioButton.Content == "1M") {
+                this.ShowLoadingSpinner();
                 this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
             } else if ((string)radioButton.Content == "1Y") {
+                this.ShowLoadingSpinner();
                 this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
             } else if ((string)radioButton.Content == "5Y") {
+                this.ShowLoadingSpinner();
                 this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
             }
 
+        }
+
+        private void ShowLoadingSpinner() {
+            this.loadingSpinner.Visibility = Visibility.Visible;
+            this.loadingSpinner.Spin = true;
+        }
+
+        private async Task HideLoadingSpinner() {
+            await Task.Delay(1000);
+            this.loadingSpinner.Visibility = Visibility.Hidden;
+            this.loadingSpinner.Spin = false;
         }
 
     }

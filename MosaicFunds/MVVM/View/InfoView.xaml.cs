@@ -30,8 +30,13 @@ namespace MosaicFunds.MVVM.View
         public InfoView()
         {
             InitializeComponent();
-            this.lineChart = new ALineChart(this.stockChart, 15.62, 15.62 - 4.47, 0.1, 15);
 
+            this.loadingSpinner.Foreground = new SolidColorBrush(Color.FromRgb(173, 216, 230));
+
+            this.ShowLoadingSpinner();
+            this.lineChart = new ALineChart(this.stockChart, 15.62, 15.62 - 4.47, 0.1, 15);
+            _ = HideLoadingSpinner();
+            
             MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
             this.watchlistButton.IsChecked = false;
             
@@ -255,15 +260,25 @@ namespace MosaicFunds.MVVM.View
 
             RadioButton radioButton = (sender as RadioButton);
             if ((string)radioButton.Content == "1D") {
+                this.ShowLoadingSpinner();
                 this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
             } else if ((string)radioButton.Content == "1W") {
+                this.ShowLoadingSpinner();
                 this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
             } else if ((string)radioButton.Content == "1M") {
+                this.ShowLoadingSpinner();
                 this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
             } else if ((string)radioButton.Content == "1Y") {
+                this.ShowLoadingSpinner();
                 this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
             } else if ((string)radioButton.Content == "5Y") {
+                this.ShowLoadingSpinner();
                 this.lineChart.generateRandomChart();
+                _ = this.HideLoadingSpinner();
             }
 
         }
@@ -271,6 +286,17 @@ namespace MosaicFunds.MVVM.View
         private void NumberValidationTextBox(object sender, TextCompositionEventArgs e) {
             Regex regex = new Regex("[^0-9]+");
             e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void ShowLoadingSpinner() {
+            this.loadingSpinner.Visibility = Visibility.Visible;
+            this.loadingSpinner.Spin = true;
+        }
+
+        private async Task HideLoadingSpinner() {
+            await Task.Delay(1000);
+            this.loadingSpinner.Visibility = Visibility.Hidden;
+            this.loadingSpinner.Spin = false;
         }
 
     }

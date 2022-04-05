@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
              xmlns:local="clr-namespace:MosaicFunds.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="1080">
@@ -179,9 +180,11 @@
 
                         <StackPanel Orientation="Vertical">
 
-                            <lvc:CartesianChart x:Name="stockChart" Height="375" Margin="20"/>
+                            <fa:ImageAwesome x:Name="loadingSpinner" Icon="CircleOutlineNotch" Spin="False" Visibility="Hidden" Height="30" Width="30" 
+                                             Margin="15, 200, 0, -200"/>
+                            <lvc:CartesianChart x:Name="stockChart" Height="375" Margin="20, 0, 20, 20"/>
                             
-                            <StackPanel Orientation="Horizontal">
+                            <StackPanel Margin="0, -10, 0, 0" Orientation="Horizontal">
                                 <RadioButton Click="IntervalButtonClicked" Content="1D" FontFamily="/Fonts/#Poppins" FontSize="13" FontWeight="Bold" Style="{StaticResource DataIntervalButtonTheme}" 
                                      Margin="75, 0, 0, 0" IsChecked="True"/>
                                 <RadioButton Click="IntervalButtonClicked" Content="1W" FontFamily="/Fonts/#Poppins" FontSize="13" FontWeight="Bold" Style="{StaticResource DataIntervalButtonTheme}" 
