@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MosaicFunds.MVVM.Model;
+using MosaicFunds.MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,19 @@ namespace MosaicFunds.MVVM.View {
 
         public DashboardWatchListTickerView() {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e) {
+
+            MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
+            mainViewModel.InfoViewModel.ticker = new Ticker(this.Name.Text, this.CompanyName.Text, this.Price.Text, "+2.59", this.ChangePercent.Text, "NA", "NA", "NA");
+            mainViewModel.CurrentView = mainViewModel.InfoViewModel;
+
+            mainViewModel.pageBuffer.Add(mainViewModel.DashboardVM);
+            MainWindow main = (MainWindow)Application.Current.MainWindow;
+            if (!main.backButton.IsVisible)
+                main.backButton.Visibility = Visibility.Visible;
+
         }
     }
 }
