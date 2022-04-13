@@ -18,8 +18,6 @@ namespace MosaicFunds.MVVM.Model {
         private double minValue;
         private double offset;
 
-        
-
         public ALineChart(CartesianChart cartesianChart, double maxValue, double minValue, double offset, int numberOfPoints = 25) {
             this.cartesianChart = cartesianChart;
             this.numberOfPoints = numberOfPoints;
@@ -55,9 +53,8 @@ namespace MosaicFunds.MVVM.Model {
 
             this.cartesianChart.AxisX[0].MaxRange = this.numberOfPoints;
 
-            this.cartesianChart.Zoom = ZoomingOptions.Xy;
-            this.cartesianChart.Pan = PanningOptions.Xy;
-
+            _ = EnableZooming();
+           
             this.cartesianChart.AxisY[0].RangeChanged += PortfolioChartRangeChanged;  
         }
 
@@ -84,6 +81,12 @@ namespace MosaicFunds.MVVM.Model {
             lineSeries.LabelPoint = point => "$" + String.Format("{0:n}", point.Y);
             series.Add(lineSeries);
             this.cartesianChart.Series = series;
+        }
+
+        private async Task EnableZooming() {
+            await Task.Delay(1000);
+            this.cartesianChart.Zoom = ZoomingOptions.Xy;
+            this.cartesianChart.Pan = PanningOptions.Xy;
         }
 
     }

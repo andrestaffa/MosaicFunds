@@ -21,64 +21,81 @@
 
             <StackPanel Margin="50" Orientation="Vertical">
 
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Grid.Column="1" Margin="0, 0, 0, 0" 
-                               VerticalAlignment="Center" 
-                               HorizontalAlignment="Center" 
-                               Text="Name" Foreground="White" 
-                               FontFamily="/Fonts/#Poppins"
-                               FontWeight="Bold" FontSize="25"/>
-                    <TextBlock Grid.Column="1" Margin="700, 0, 0, 0" 
-                               VerticalAlignment="Center" 
-                               HorizontalAlignment="Right" 
-                               Text="Andre" Foreground="DarkGray" 
-                               FontFamily="/Fonts/#Poppins"
-                               FontWeight="Bold" FontSize="25"/>
-                </StackPanel>
+                <DockPanel>
+                    <TextBlock x:Name="settings1_static" Margin="0, 15, 0, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" 
+                           Text="Name" 
+                           Foreground="White" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="25"/>
+                    <TextBlock x:Name="settings1" Margin="0, 25, 30, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Right" 
+                           Text="Andre" 
+                           Foreground="#4692BA" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="25"/>
+                </DockPanel>
 
-                <StackPanel Margin="0. 40, 0, 0" Orientation="Horizontal">
-                    <TextBlock Grid.Column="1" Margin="0, 0, 0, 0" 
-                               VerticalAlignment="Center" 
-                               HorizontalAlignment="Center" 
-                               Text="Last Name" Foreground="White" 
-                               FontFamily="/Fonts/#Poppins"
-                               FontWeight="Bold" FontSize="25"/>
-                    <TextBlock Grid.Column="1" Margin="642, 0, 0, 0" 
-                               VerticalAlignment="Center" 
-                               HorizontalAlignment="Right" 
-                               Text="Staffa" Foreground="DarkGray" 
-                               FontFamily="/Fonts/#Poppins"
-                               FontWeight="Bold" FontSize="25"/>
-                </StackPanel>
+                <DockPanel>
+                    <TextBlock x:Name="settings2_static" Margin="0, 15, 0, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" 
+                           Text="Last Name" 
+                           Foreground="White" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="25"/>
+                    <TextBlock x:Name="settings2" Margin="0, 25, 30, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Right" 
+                           Text="Staffa" 
+                           Foreground="#4692BA" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="25"/>
+                </DockPanel>
 
-                <StackPanel Margin="0. 40, 0, 0" Orientation="Horizontal">
-                    <TextBlock Grid.Column="1" Margin="0, 0, 0, 0" 
-                               VerticalAlignment="Center" 
-                               HorizontalAlignment="Center" 
-                               Text="Email Address" Foreground="White" 
-                               FontFamily="/Fonts/#Poppins"
-                               FontWeight="Bold" FontSize="25"/>
-                    <TextBlock Grid.Column="1" Margin="342, 0, 0, 0" 
-                               VerticalAlignment="Center" 
-                               HorizontalAlignment="Right" 
-                               Text="andre.staffa@ucalgary.ca" Foreground="DarkGray" 
-                               FontFamily="/Fonts/#Poppins"
-                               FontWeight="Bold" FontSize="25"/>
-                </StackPanel>
-                <StackPanel Margin="0. 40, 0, 0" Orientation="Horizontal">
-                    <TextBlock Grid.Column="1" Margin="0, 0, 0, 0" 
-                               VerticalAlignment="Center" 
-                               HorizontalAlignment="Center" 
-                               Text="Country" Foreground="White" 
-                               FontFamily="/Fonts/#Poppins"
-                               FontWeight="Bold" FontSize="25"/>
-                    <TextBlock Grid.Column="1" Margin="652, 0, 0, 0" 
-                               VerticalAlignment="Center" 
-                               HorizontalAlignment="Right" 
-                               Text="Canada" Foreground="DarkGray" 
-                               FontFamily="/Fonts/#Poppins"
-                               FontWeight="Bold" FontSize="25"/>
-                </StackPanel>
+                <DockPanel>
+                    <TextBlock x:Name="settings3_static" Margin="0, 15, 0, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" 
+                           Text="Email Address" 
+                           Foreground="White" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="25"/>
+                    <TextBlock x:Name="settings3" Margin="0, 25, 30, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Right" 
+                           Text="andre.staffa@ucalgary.ca" 
+                           Foreground="#4692BA" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="25"/>
+                </DockPanel>
+
+                <DockPanel>
+                    <TextBlock x:Name="settings4_static" Margin="0, 15, 0, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Left" 
+                           Text="Country"
+                           Foreground="White" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="25"/>
+                    <TextBlock x:Name="settings4" Margin="0, 25, 30, 0" 
+                           VerticalAlignment="Center" 
+                           HorizontalAlignment="Right" 
+                           Text="Canada" 
+                           Foreground="#4692BA" 
+                           FontFamily="/Fonts/#Poppins" 
+                           FontWeight="Bold" 
+                           FontSize="25"/>
+                </DockPanel>
 
             </StackPanel>
             

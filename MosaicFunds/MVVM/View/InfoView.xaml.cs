@@ -190,6 +190,10 @@ namespace MosaicFunds.MVVM.View
             dashboardPortfolioTickerView.portChangePercent.Foreground = Brushes.DarkGray;
             mainViewModel.portfolioTickers.Add(dashboardPortfolioTickerView);
 
+            this.stockShares.Text = String.Format("{0:n0}", int.Parse(this.sharesTextBox.Text));
+            this.stockValue.Text = "$130.66k";
+            this.stockProfit.Text = "0.00%";
+
         }
 
         private void _slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)

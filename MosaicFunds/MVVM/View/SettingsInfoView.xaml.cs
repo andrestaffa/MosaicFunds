@@ -27,7 +27,22 @@ namespace MosaicFunds.MVVM.View {
             InitializeComponent();
             MainViewModel mainViewModel = (MainViewModel)Application.Current.MainWindow.DataContext;
             this.settingsModel = mainViewModel.SettingsInfoViewModel.settingsModel;
+
             this.titleLabel.Text = this.settingsModel.Title;
+
+            this.settings1_static.Text = this.settingsModel.Settings1_Static;
+            this.settings1.Text = this.settingsModel.Settings1;
+
+            this.settings2_static.Text = this.settingsModel.Settings2_Static;
+            this.settings2.Text = this.settingsModel.Settings2;
+
+            this.settings3_static.Text = this.settingsModel.Settings3_Static;
+            this.settings3.Text = this.settingsModel.Settings3;
+
+            this.settings4_static.Text = this.settingsModel.Settings4_Static;
+            this.settings4.Text = this.settingsModel.Settings4;
+
+
         }
 
     }

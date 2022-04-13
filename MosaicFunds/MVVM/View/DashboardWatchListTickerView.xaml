@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
 
-    <Button Style="{StaticResource TickerButtonTheme}">
+    <Button Style="{StaticResource TickerButtonTheme}" Click="Button_Click">
         <StackPanel Orientation="Horizontal" Margin="10">
             <StackPanel>
                 <TextBlock x:Name="Name" Text="AMC" Foreground="White" FontFamily="/Fonts/#Poppins" FontWeight="Bold"/>
